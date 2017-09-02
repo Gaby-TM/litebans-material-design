@@ -67,7 +67,8 @@ $settings = $this->page->settings;
     <!-- CSS -->
     <link href="<?php echo $this->autoversion('inc/css/bootstrap.min.css'); ?>" rel="stylesheet">
 <link href="<?php echo $this->autoversion('inc/css/mdb.min.css'); ?>" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="<?php echo $this->autoversion('inc/css/custom.css'); ?>" rel="stylesheet">
     <script type="text/javascript">
         function withjQuery(f) {
@@ -77,12 +78,29 @@ $settings = $this->page->settings;
             }, 100);
         }
     </script>
+<script>
+$(document).ready(function () {
+    var interval = 15000;   //number of mili seconds between each call
+    var refresh = function() {
+    $.getJSON("https://mcapi.ca/query/serverIP/players",function(json){
+          if (json.status !== true) {
+         
+        } else {
+            // success
+            $(".player-count").html(json.players.online);
+            setTimeout(function(){ $('.player-count').removeClass('zoomIn').addClass('zoomOut') }, 14350); 
+            setTimeout(function(){ $('.player-count').removeClass('zoomOut').addClass('zoomIn') }, 0);
+        }
+    });
+    setTimeout(function() {
+        refresh();
+            },
+        interval);
+            }
+        refresh();
+});
+</script>
 </head>
-<style>
-.navbar {
-background-image: #2BBBAD!important;
-}
-</style>
 <header class="navbar navbar-expand-lg navbar-dark bg-default">
     <div class="container">
         <div class="navbar-header">

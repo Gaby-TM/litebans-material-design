@@ -6745,12 +6745,13 @@ ul.instagram-photos li img {
 	transition: .5s
 }
 table th {
-	font-size: .9rem;
-	font-weight: 400
+	font-size: 1.6rem;
+	font-weight: 400;
+color: white;
 }
 table td {
-	font-size: .9rem;
-	font-weight: 300
+    font-weight: 300;
+    color: white;
 }
 table.table thead th {
 	border-top: none

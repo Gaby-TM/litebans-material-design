@@ -78,17 +78,17 @@ tr.hover {
 }
 
 .label-ban {
-    background-color: darkred;
+    background-color: #ff3547;
 }
 
 .label-mute {
-    background-color: dimgrey;
+    background-color: #78909c;
 }
 
 .label-warn {
-    background-color: darkorange;
+    background-color: #F80;
 }
 
 .label-kick {
-    background-color: tomato;
+    background-color: #8e24aa;
 }
