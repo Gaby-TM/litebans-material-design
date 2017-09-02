@@ -446,16 +446,16 @@ class Page {
         $prev_class = "litebans-" . ($prev_active ? "pager-active" : "pager-inactive");
         $next_class = "litebans-" . ($next_active ? "pager-active" : "pager-inactive");
 
-        $pager_prev = "<div class=\"litebans-pager litebans-pager-left $prev_class\">«</div>";
+        $pager_prev = "<div class=\"btn btn-default litebans-pager-left $prev_class\">«</div>";
         if ($prev_active) {
             $pager_prev = "<a href=\"$page?page={$prev}{$prevargs}\">$pager_prev</a>";
         }
 
-        $pager_next = "<div class=\"litebans-pager litebans-pager-right $next_class\">»</div>";
+        $pager_next = "<div class=\"btn btn-default litebans-pager-right $next_class\">»</div>";
         if ($next_active) {
             $pager_next = "<a href=\"$page?page={$next}{$args}\">$pager_next</a>";
         }
-        $pager_count = '<div style=\"margin-top: 32px;\"><div style=\"text-align: center; font-size:15px;\">' . $this->lang->page_page . ' ' . $cur . '/' . $pages . '</div></div>';
+        $pager_count = "<div class=\"btn btn-default\">" . $this->lang->page_page . ' ' . $cur . '/' . $pages . '</div></div>';
         echo "$pager_prev $pager_next $pager_count";
     }
 

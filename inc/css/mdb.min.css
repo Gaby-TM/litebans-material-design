@@ -25,6 +25,10 @@
  *
  */
 
+.badge {
+border-radius: 15px;
+}
+
 .ml-0, .mx-0 {
 	margin-left: 0!important
 }
@@ -1296,11 +1300,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
 	cursor: not-allowed!important
 }
 .badge, .jumbotron, .list-group .list-group-item, .navbar, .navbar-toggler {
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-ms-border-radius: 2px;
-	-o-border-radius: 2px;
-	border-radius: 2px
+
 }
 .flex-center ul {
 	list-style-type: none;
@@ -4528,7 +4528,7 @@ button:focus {
 	outline: 0!important
 }
 .btn {
-	font-size: .8rem;
+	font-size: 1.2rem;
 	padding: .85rem 2.13rem;
 	margin: 6px;
 	border-radius: 2px;
@@ -6090,7 +6090,7 @@ body.scrollable {
 	display: none
 }
 .jumbotron {
-	background-color: #fff;
+	background-color: #fafafa;
 	padding: 2rem
 }
 .jumbotron.m-1, .jumbotron.m-2, .jumbotron.m-3 {
