@@ -64,12 +64,24 @@ $settings = $this->page->settings;
     <meta name="description" content="">
     <meta name="author" content="LiteBans">
     <link rel="shortcut icon" href="inc/img/minecraft.ico">
+<?php session_start();
+$themeurl = "inc/css/mdb-teal.bootstrap.min.css";
+if(isset($_POST['theme'])){
+   $_SESSION['theme'] = strtolower($_POST['theme']);
+
+}
+if(isset($_SESSION['theme'])){
+   $theme = $_SESSION['theme'];
+}
+    if(!empty($theme)) {
+      $themeurl = "inc/css/" . $theme . ".bootstrap.min.css";
+} else { $themeurl = "inc/css/mdb-teal.bootstrap.min.css"; }?>
+
     <!-- CSS -->
     <link href="<?php echo $this->autoversion('inc/css/bootstrap.min.css'); ?>" rel="stylesheet">
-<link href="<?php echo $this->autoversion('inc/css/mdb.min.css'); ?>" rel="stylesheet">
+<link href="<?php echo $this->autoversion($themeurl); ?>" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="<?php echo $this->autoversion('inc/css/custom.css'); ?>" rel="stylesheet">
     <script type="text/javascript">
         function withjQuery(f) {
             if (window.jQuery) f();
