@@ -3,6 +3,8 @@ litebans-php
 
 Web interface for [LiteBans](https://www.spigotmc.org/resources/litebans.3715/)
 
+Includes Multiple Themes
+
 ## User Contributed Translations
 All translations in the "lang" folder have been contributed by users. Only the "en_US" locale will receive full support and updates.
 
