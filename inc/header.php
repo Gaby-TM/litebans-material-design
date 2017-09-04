@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
 class Header {
 /**
@@ -64,7 +64,7 @@ $settings = $this->page->settings;
     <meta name="description" content="">
     <meta name="author" content="LiteBans">
     <link rel="shortcut icon" href="inc/img/minecraft.ico">
-<?php session_start();
+<?php 
 $themeurl = "inc/css/mdb-teal.bootstrap.min.css";
 if(isset($_POST['theme'])){
    $_SESSION['theme'] = strtolower($_POST['theme']);

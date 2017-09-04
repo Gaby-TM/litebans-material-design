@@ -3,7 +3,7 @@ require_once './inc/page.php';
 
 $page = new Page("index");
 $page->print_title();
-?>
+?><br><br>
 <div class="container">
     <div class="jumbotron">
         <div style="text-align: center;">
@@ -45,7 +45,7 @@ $page->print_title();
 <form method="post">
 <select class="form-control" name='theme' onchange='this.form.submit();'>
 <?php
-$themes = Array('mdb-teal','mdb-red','mdb-warning','mdb-success','mdb-info');
+$themes = Array('mdb-teal','mdb-red','mdb-warning','mdb-success','mdb-info','mdb-secondary','mdb-usa');
 if(!isset($_SESSION['theme'])){
 ?>
   <option>mdb-teal</option>
@@ -53,6 +53,8 @@ if(!isset($_SESSION['theme'])){
 <option>mdb-warning</option>
 <option>mdb-success</option>
 <option>mdb-info</option>
+<option>mdb-secondary</option>
+<option>mdb-usa</option>
   <?php
 }else{
    foreach($themes AS $themey){

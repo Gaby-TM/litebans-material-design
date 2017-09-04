@@ -25,6 +25,10 @@
  *
  */
 
+body {
+    background-color: #2E2E2E!important
+}
+
 .badge {
     display: inline-block;
     min-width: 10px;
