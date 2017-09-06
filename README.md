@@ -9,8 +9,8 @@ Web interface for [LiteBans](https://www.spigotmc.org/resources/litebans.3715/)
 
 ## Useful Information
 
-Spigot Page - [link](https://www.spigotmc.org/resources/litebans-material-design-theme-multiple-themes-included.46648/)
-Demo Page - [link](https://glaremasters.me/litebans/)
+- Spigot Page - [link](https://www.spigotmc.org/resources/litebans-material-design-theme-multiple-themes-included.46648/)
+- Demo Page - [link](https://glaremasters.me/litebans/)
 
 ## Bugs and Issues
 
