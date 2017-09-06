@@ -37,7 +37,7 @@ final class Settings {
         $this->server_ip = 'us.mineplex.com';
 
         // Put the image URL of your logo here
-        $this->logo_image = 'https://via.placeholder.com/350x150';
+        $this->logo_image = 'https://via.placeholder.com/275x150';
 
         // Clicking on the "Contact Us" button will send you to this address.
         $this->contact_link = '#';
