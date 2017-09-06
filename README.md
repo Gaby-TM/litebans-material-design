@@ -3,6 +3,10 @@ litebans-php
 
 Web interface for [LiteBans](https://www.spigotmc.org/resources/litebans.3715/)
 
+Includes Multiple Themes
+
+To learn how to change the Server IP & Button Links, please click [Here](https://www.spigotmc.org/threads/litebans-material-design-theme-multiple-themes-included.270339/#post-2647622)
+
 ## User Contributed Translations
 All translations in the "lang" folder have been contributed by users. Only the "en_US" locale will receive full support and updates.
 
