@@ -53,9 +53,12 @@ function autoversion($file) {
     return $file . "?" . filemtime($file);
 }
 
+
+
 function print_header() {
 $settings = $this->page->settings;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,7 +97,7 @@ if(isset($_SESSION['theme'])){
 $(document).ready(function () {
     var interval = 15000;   //number of mili seconds between each call
     var refresh = function() {
-    $.getJSON("https://mcapi.ca/query/serverIP/players",function(json){
+   $.getJSON("https://mcapi.ca/query/<?php echo $settings->server_ip ?>/players",function(json){
           if (json.status !== true) {
          
         } else {

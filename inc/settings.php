@@ -28,6 +28,37 @@ final class Settings {
         // Clicking on the header name will send you to this address.
         $this->name_link = '#';
 
+
+
+
+        // Start of information added for GlareMaster's Litebans Addon
+
+        // Set your server IP for the Player's Online
+        $this->server_ip = 'us.mineplex.com';
+
+        // Clicking on the "Contact Us" button will send you to this address.
+        $this->contact_link = '#';
+
+        // Clicking on the "Ban Appeal" button will send you to this address.
+        $this->appeal_link = '#';
+
+        // Clicking on the YouTube Icon will send you to this address.
+        $this->youtube_link = '#';
+
+        // Clicking on the Twitter Icon will send you to this address.
+        $this->twitter_link = '#';
+
+        // Clicking on the Facebook Icon will send you to this address.
+        $this->facebook_link = '#';
+
+        // Clicking on the Google Plus Icon will send you to this address.
+        $this->googleplus_link = '#';
+
+        // End of information added for GlareMaster's Litebans Addon
+
+
+
+
         // Show inactive bans? Removed bans will show (Unbanned), mutes will show (Unmuted), warnings will show (Expired).
         $this->show_inactive_bans = true;
 

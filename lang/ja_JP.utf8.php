@@ -95,5 +95,10 @@ class Lang {
         $this->info_error_notfound2 = " はデータベースで見つかりません";
         $this->info_error_notplayer = "エラー: プレイヤーが見つかりません";
         $this->history_playernotfound = "データベースでプレイヤーは見つかりません";
+
+        //Custom Added by GlareMasters's Material Design Addon
+        $this->contact_button = "Contact Us";
+        $this->ban_appeal = "Ban Appeal";
+        $this->players_online = "Players Online:";
     }
 }

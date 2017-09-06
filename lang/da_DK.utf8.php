@@ -95,5 +95,10 @@ class Lang {
         $this->info_error_notfound2 = " blev ikke fundet i databasen.";
         $this->info_error_notplayer = "Fejl: Spiller ikke fundet.";
         $this->history_playernotfound = "Spiller blev ikke fundet i databasen.";
+
+        //Custom Added by GlareMasters's Material Design Addon
+        $this->contact_button = "Contact Us";
+        $this->ban_appeal = "Ban Appeal";
+        $this->players_online = "Players Online:";
     }
 }

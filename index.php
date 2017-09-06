@@ -5,6 +5,7 @@ $page = new Page("index");
 $page->print_title();
 ?><br><br>
 <div class="container">
+<div id="particles-js"></div>
     <div class="jumbotron">
         <div style="text-align: center;">
 <img src="https://via.placeholder.com/350x150"/>
@@ -13,29 +14,29 @@ $page->print_title();
 
         <div style="text-align: center;"><p style="color:black;"><?php echo $page->lang->index_allsins; ?></p></div>
 <div style="text-align: center;">
-<a href="#">
-<button type="button" class="btn btn-default">Contact Us</button></a>
+<a href="<?php echo $page->settings->contact_link; ?>">
+<button type="button" class="btn btn-default"><?php echo $page->lang->contact_button; ?></button></a>
 
-<a href="#">
-<button type="button" class="btn btn-default">Ban Appeal</button></a></div>
+<a href="<?php echo $page->settings->appeal_link; ?>">
+<button type="button" class="btn btn-default"><?php echo $page->lang->ban_appeal; ?></button></a></div>
 <div style="text-align: center;">
-<button type="button" class="btn btn-default">Players Online: <span class="player-count badge"></span></button></a>
+<button type="button" class="btn btn-default"><?php echo $page->lang->players_online; ?><span class="player-count badge"></span></button></a>
 </div>
 <div class-"conatiner">
     <div class="icon">
-<a href="#">
+<a href="<?php echo $page->settings->youtube_link; ?>">
     	 <span class="fa-stack fa-2x" aria-hidden="true">
     	   <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
     	 </span></a>
-<a href="#">
+<a href="<?php echo $page->settings->twitter_link; ?>">
     	  <span class="fa-stack fa-2x" aria-hidden="true">
     	   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
     	 </span></a>
-<a href="#">
+<a href="<?php echo $page->settings->facebook_link; ?>">
     	  <span class="fa-stack fa-2x" aria-hidden="true">
     	   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
     	 </span></a>
-<a href="#">
+<a href="<?php echo $page->settings->googleplus_link; ?>">
     	  <span class="fa-stack fa-2x" aria-hidden="true">
     	   <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
     	 </span>

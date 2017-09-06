@@ -95,5 +95,10 @@ class Lang {
         $this->info_error_notfound2 = " not found in database.";
         $this->info_error_notplayer = "Error: Player name not found.";
         $this->history_playernotfound = "Player not found in database.";
+
+        //Custom Added by GlareMasters's Material Design Addon
+        $this->contact_button = "Contact Us";
+        $this->ban_appeal = "Ban Appeal";
+        $this->players_online = "Players Online:";
     }
 }

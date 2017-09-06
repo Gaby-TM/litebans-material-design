@@ -84,5 +84,10 @@ class Lang {
         $this->warns_reason = "Důvod varování";
         $this->warns_when = "Varován kdy";
         $this->warns_receive = "Varování doručeno";
+
+        //Custom Added by GlareMasters's Material Design Addon
+        $this->contact_button = "Contact Us";
+        $this->ban_appeal = "Ban Appeal";
+        $this->players_online = "Players Online:";
     }
 }
