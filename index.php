@@ -8,7 +8,7 @@ $page->print_title();
 <div id="particles-js"></div>
     <div class="jumbotron">
         <div style="text-align: center;">
-<img src="https://via.placeholder.com/350x150"/>
+          <img src="<?php echo $page->settings->logo_image; ?>"/>
             <h2 style="text-shadow:none; color:black;"><?php echo $page->lang->index_welcome1 . $page->settings->name . $page->lang->index_welcome2; ?></h2>
         </div>
 
@@ -41,7 +41,7 @@ $page->print_title();
     	   <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
     	 </span>
     </a>
-   
+
 </div>
 <form method="post">
 <select class="form-control" name='theme' onchange='this.form.submit();'>
