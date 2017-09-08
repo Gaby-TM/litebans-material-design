@@ -62,7 +62,24 @@ $settings = $this->page->settings;
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+<!-- COMMON TAGS -->
+<meta charset="utf-8">
+
+<!-- Search Engine -->
+<meta name="description" content="<?php echo $settings->meta_description; ?>">
+<meta name="image" content="<?php echo $settings->meta_image; ?>">
+
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="LiteBans Material Design Theme (Multiple Themes Included)">
+<meta name="og:description" content="<?php echo $settings->meta_description; ?>">
+<meta name="og:image" content="<?php echo $settings->meta_image; ?>">
+
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:description" content="<?php echo $settings->meta_title; ?>">
+<meta name="og:image" content="<?php echo $settings->meta_image; ?>">
+<meta name="og:site_name" content="<?php echo $settings->meta_title; ?>">
+<meta name="og:type" content="website">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="LiteBans">

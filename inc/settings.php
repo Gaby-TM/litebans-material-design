@@ -57,6 +57,13 @@ final class Settings {
         // Clicking on the Google Plus Icon will send you to this address.
         $this->googleplus_link = '#';
 
+        // Modify this for your SEO (Search Engine Optimization)
+
+        $this->meta_title = 'LiteBans Material Design Theme (Multiple Themes Included)';
+        $this->meta_description = 'Welcome to our Litebans Web Interface! You can see our bans, mutes, warns, and kicks!';
+        $this->meta_keywords ='minecraft,bans,spigot,litebans,material,design';
+        $this->meta_image ='https://www.spigotmc.org/data/avatars/l/64/64823.jpg?1496878424';
+
         // End of information added for GlareMaster's Litebans Addon
 
 
