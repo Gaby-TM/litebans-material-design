@@ -64,10 +64,12 @@ $settings = $this->page->settings;
 <head>
 <!-- COMMON TAGS -->
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Search Engine -->
 <meta name="description" content="<?php echo $settings->meta_description; ?>">
 <meta name="image" content="<?php echo $settings->meta_image; ?>">
+<meta name="author" content="LiteBans">
 
 <!-- Schema.org for Google -->
 <meta itemprop="name" content="LiteBans Material Design Theme (Multiple Themes Included)">
@@ -79,11 +81,8 @@ $settings = $this->page->settings;
 <meta name="og:image" content="<?php echo $settings->meta_image; ?>">
 <meta name="og:site_name" content="<?php echo $settings->meta_title; ?>">
 <meta name="og:type" content="website">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="LiteBans">
-    <link rel="shortcut icon" href="inc/img/minecraft.ico">
+    
+    
 <?php 
 $themeurl = "inc/css/mdb-teal.bootstrap.min.css";
 if(isset($_POST['theme'])){
@@ -98,7 +97,8 @@ if(isset($_SESSION['theme'])){
 } else { $themeurl = "inc/css/mdb-teal.bootstrap.min.css"; }?>
 
     <!-- CSS -->
-    <link href="<?php echo $this->autoversion('inc/css/bootstrap.min.css'); ?>" rel="stylesheet">
+<link href="<?php echo $this->autoversion('inc/css/bootstrap.min.css'); ?>" rel="stylesheet">
+<link rel="shortcut icon" href="inc/img/minecraft.ico">
 <link href="<?php echo $this->autoversion($themeurl); ?>" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
