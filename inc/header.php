@@ -85,6 +85,7 @@ if(isset($_SESSION['theme'])){
 <link href="<?php echo $this->autoversion($themeurl); ?>" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script type="text/javascript">
         function withjQuery(f) {
             if (window.jQuery) f();
