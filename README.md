@@ -11,6 +11,7 @@ Web interface for [LiteBans](https://www.spigotmc.org/resources/litebans.3715/)
 
 - Spigot Page - [link](https://www.spigotmc.org/resources/litebans-material-design-theme-multiple-themes-included.46648/)
 - Demo Page - [link](https://glaremasters.me/litebans/)
+- Contact Me - [link](mailto:admin@glaremasters.me)
 
 ## Bugs and Issues
 
