@@ -34,7 +34,7 @@ final class Settings {
         // Start of information added for GlareMaster's Litebans Addon
 
         // Set your server IP for the Player's Online
-        $this->server_ip = 'us.mineplex.com';
+        $this->server_ip = 'mc.hypixel.net';
 
         // Put the image URL of your logo here
         $this->logo_image = 'https://via.placeholder.com/275x150';

@@ -12,7 +12,7 @@ $page->print_title();
             <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->lang->index_welcome1 . $page->settings->name . $page->lang->index_welcome2; ?></h2>
         </div>
 
-        <div style="text-align: center;"><p style="color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->lang->index_allsins; ?></p></div>
+<div style="text-align: center;"><p style="color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->lang->index_allsins; ?></p></div>
 <div style="text-align: center;">
 <a href="<?php echo $page->settings->contact_link; ?>">
 <button type="button" class="btn btn-default"><?php echo $page->lang->contact_button; ?></button></a>
@@ -20,8 +20,31 @@ $page->print_title();
 <a href="<?php echo $page->settings->appeal_link; ?>">
 <button type="button" class="btn btn-default"><?php echo $page->lang->ban_appeal; ?></button></a></div>
 <div style="text-align: center;">
-<button type="button" class="btn btn-default"><?php echo $page->lang->players_online; ?><span class="player-count badge"></span></button></a>
-</div>
+
+<button type="button" class="btn btn-default" id="player-count-button" data-clipboard-text="<?php echo $page->settings->server_ip ?>" title="Click to Copy"><?php echo $page->lang->players_online; ?><span class="player-count badge"></span></button>
+</div> 
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://unpkg.com/tippy.js@1.2.1/dist/tippy.min.js"></script>
+     <script>
+    var btn = document.getElementById('player-count-button');
+    var clipboard = new Clipboard(btn);
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
+    <script>
+tippy('#player-count-button', {
+  position: 'bottom,',
+  animation: 'scale',
+  duration: 500,
+  arrow: true
+})
+</script>
+
 <div class-"conatiner">
     <div class="icon">
 <a href="<?php echo $page->settings->youtube_link; ?>">
@@ -49,8 +72,8 @@ $page->print_title();
 $themes = Array('mdb-teal','mdb-red','mdb-warning','mdb-success','mdb-info','mdb-secondary','mdb-usa');
 if(!isset($_SESSION['theme'])){
 ?>
-  <option>mdb-teal</option>
-  <option>mdb-red</option>
+<option>mdb-teal</option>
+<option>mdb-red</option>
 <option>mdb-warning</option>
 <option>mdb-success</option>
 <option>mdb-info</option>

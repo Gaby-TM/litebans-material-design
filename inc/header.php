@@ -97,12 +97,18 @@ if(isset($_SESSION['theme'])){
 } else { $themeurl = "inc/css/mdb-teal.bootstrap.min.css"; }?>
 
     <!-- CSS -->
+    
 <link href="<?php echo $this->autoversion('inc/css/bootstrap.min.css'); ?>" rel="stylesheet">
 <link rel="shortcut icon" href="inc/img/minecraft.ico">
 <link href="<?php echo $this->autoversion($themeurl); ?>" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@1.2.1/dist/tippy.css">
+
+
+    
+    
     <script type="text/javascript">
         function withjQuery(f) {
             if (window.jQuery) f();
@@ -133,7 +139,9 @@ $(document).ready(function () {
         refresh();
 });
 </script>
+
 </head>
+
 <header class="navbar navbar-expand-lg navbar-dark bg-default">
     <div class="container">
         <div class="navbar-header">
