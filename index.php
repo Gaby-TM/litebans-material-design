@@ -48,53 +48,10 @@ tippy('#player-count-button', {
 </script>
 
 <div class-"conatiner">
-    <div class="icon">
-<a href="<?php echo $page->settings->youtube_link; ?>">
-    	 <span class="fa-stack fa-2x" aria-hidden="true">
-    	   <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
-    	 </span></a>
-<a href="<?php echo $page->settings->twitter_link; ?>">
-    	  <span class="fa-stack fa-2x" aria-hidden="true">
-    	   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-    	 </span></a>
-<a href="<?php echo $page->settings->facebook_link; ?>">
-    	  <span class="fa-stack fa-2x" aria-hidden="true">
-    	   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-    	 </span></a>
-<a href="<?php echo $page->settings->googleplus_link; ?>">
-    	  <span class="fa-stack fa-2x" aria-hidden="true">
-    	   <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-    	 </span>
-    </a>
-
-</div>
-<form method="post">
-<select class="form-control" name='theme' onchange='this.form.submit();'>
-<?php
-$themes = Array('mdb-teal','mdb-red','mdb-warning','mdb-success','mdb-info','mdb-secondary','mdb-usa');
-if(!isset($_SESSION['theme'])){
-?>
-<option>mdb-teal</option>
-<option>mdb-red</option>
-<option>mdb-warning</option>
-<option>mdb-success</option>
-<option>mdb-info</option>
-<option>mdb-secondary</option>
-<option>mdb-usa</option>
-  <?php
-}else{
-   foreach($themes AS $themey){
-      if(strtolower($themey)==$_SESSION['theme']){
-         echo "<option selected>" . $themey . "</option>";
-      }else{
-         echo '<option>'.$themey."</option>";
-      }
-}
-}
-?>
-</select>
-<noscript><input type="submit" value="Change"></noscript>
-</form>
+<?php $page->print_social(); ?>
+    
+<?php $page->print_theme_changer(); ?>
     </div>
+</div>
 </div>
 <?php $page->print_footer(false); ?>

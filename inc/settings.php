@@ -44,6 +44,12 @@ final class Settings {
 
         // Clicking on the "Ban Appeal" button will send you to this address.
         $this->appeal_link = '#';
+        
+        // Would you like to display the social media icons on the page?
+        $this->show_social = true;
+        
+        // Would you like to display the theme changer to your users?
+        $this->show_theme_changer = true;
 
         // Clicking on the YouTube Icon will send you to this address.
         $this->youtube_link = '#';
@@ -65,7 +71,6 @@ final class Settings {
         $this->meta_image ='https://www.spigotmc.org/data/avatars/l/64/64823.jpg?1496878424';
 
         // End of information added for GlareMaster's Litebans Addon
-
 
 
 
