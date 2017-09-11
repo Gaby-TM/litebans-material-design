@@ -21,25 +21,27 @@ $page->print_title();
 <button type="button" class="btn btn-default"><?php echo $page->lang->ban_appeal; ?></button></a></div>
 <div style="text-align: center;">
 
-<button type="button" class="btn btn-default" id="player-count-button" data-clipboard-text="<?php echo $page->settings->server_ip ?>" title="Click to Copy"><?php echo $page->lang->players_online; ?><span class="player-count badge" style="margin-left: 5px;"></span></button>
-</div> 
-    
+<button type="button" class="btn btn-default" id="player-count-button" data-clipboard-text="<?php echo $page->settings->server_ip ?>" title="Click to Copy IP"><?php echo $page->lang->join; ?> <span class="player-count badge"></span> <?php echo $page->lang->others; ?> <span class="badge" style="margin-left: 5px;"><?php echo $page->settings->server_ip ?></span></button>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 <script src="https://unpkg.com/tippy.js@1.2.1/dist/tippy.min.js"></script>
-     <script>
-    var btn = document.getElementById('player-count-button');
-    var clipboard = new Clipboard(btn);
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
-    </script>
-    <script>
+<script>
+  var btn = document.getElementById('player-count-button');
+  var clipboard = new Clipboard(btn);
+  clipboard.on('success', function(e) {
+      console.log(e);
+  });
+  clipboard.on('error', function(e) {
+      console.log(e);
+  });
+</script>
+
+
+<script>
 tippy('#player-count-button', {
-  position: 'bottom,',
   animation: 'scale',
+  position: 'bottom',
   duration: 500,
   arrow: true
 })

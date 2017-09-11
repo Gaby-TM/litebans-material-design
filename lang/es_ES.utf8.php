@@ -102,5 +102,7 @@ class Lang {
         $this->github = "GitHub";
         $this->litebans = "LiteBans";
         $this->glare = "GlareMasters";
+        $this->join = "Join";
+        $this->others = "others on";
     }
 }
