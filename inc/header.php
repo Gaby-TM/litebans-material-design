@@ -113,7 +113,7 @@ if(isset($_SESSION['theme'])){
     </script>
 <script>
 $(document).ready(function () {
-    var interval = 15000;   //number of mili seconds between each call
+    var interval = 5000;   //number of mili seconds between each call
     var refresh = function() {
    $.getJSON("https://mcapi.ca/query/<?php echo $settings->server_ip ?>/players",function(json){
           if (json.status !== true) {
