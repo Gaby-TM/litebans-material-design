@@ -159,8 +159,14 @@ $(document).ready(function () {
             ));
             ?>
             <div class="nav navbar-nav navbar-right">
-                <a href="https://www.spigotmc.org/resources/litebans.3715/" class="navbar-text"
-                   target="_blank">&copy; LiteBans</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->page->lang->credits ?> <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a target="_blank" href="https://github.com/darbyjack/litebans-material-design"><?php echo $this->page->lang->github ?></a></li>
+                            <li><a target="_blank" href="https://www.spigotmc.org/resources/litebans.3715/"><?php echo $this->page->lang->litebans ?></a></li>
+                            <li><a target="_blank" href="https://glaremasters.me/"><?php echo $this->page->lang->glare ?></a></li>
+                        </ul>
+                    </li>
             </div>
         </nav>
     </div>

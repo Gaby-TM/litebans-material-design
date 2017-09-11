@@ -100,5 +100,9 @@ class Lang {
         $this->contact_button = "Contact Us";
         $this->ban_appeal = "Ban Appeal";
         $this->players_online = "Players Online:";
+        $this->credits = "Credits";
+        $this->github = "GitHub";
+        $this->litebans = "LiteBans";
+        $this->glare = "GlareMasters";
     }
 }

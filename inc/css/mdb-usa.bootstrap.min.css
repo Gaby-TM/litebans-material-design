@@ -24,6 +24,11 @@
  * Atribution: Animate CSS, Twitter Bootstrap, Materialize CSS, Normalize CSS, Waves JS, WOW JS, Toastr, Chart.js , Hammer.js
  *
  */
+
+.dropdown-menu {
+	background-color: #b20000!important;
+}
+ 
 body {
 background-image:url(https://wallpapercave.com/wp/KNwIAXz.jpg);
 }

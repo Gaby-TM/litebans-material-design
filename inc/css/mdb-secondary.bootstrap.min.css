@@ -24,6 +24,11 @@
  * Atribution: Animate CSS, Twitter Bootstrap, Materialize CSS, Normalize CSS, Waves JS, WOW JS, Toastr, Chart.js , Hammer.js
  *
  */
+
+.dropdown-menu {
+	background-color: #aa66cc!important;
+}
+
 .icon{
     text-align:center; 
     margin-top:5em;
