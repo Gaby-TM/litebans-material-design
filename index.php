@@ -21,7 +21,7 @@ $page->print_title();
 <button type="button" class="btn btn-default"><?php echo $page->lang->ban_appeal; ?></button></a></div>
 <div style="text-align: center;">
 
-<button type="button" class="btn btn-default" id="player-count-button" data-clipboard-text="<?php echo $page->settings->server_ip ?>" title="Click to Copy"><?php echo $page->lang->players_online; ?><span class="player-count badge"></span></button>
+<button type="button" class="btn btn-default" id="player-count-button" data-clipboard-text="<?php echo $page->settings->server_ip ?>" title="Click to Copy"><?php echo $page->lang->players_online; ?><span class="player-count badge" style="margin-left: 5px;"></span></button>
 </div> 
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
