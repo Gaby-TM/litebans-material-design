@@ -159,11 +159,11 @@ $(document).ready(function () {
         <nav id="litebans-navbar" class="collapse navbar-collapse">
             <?php
             $this->navbar(array(
-                "index.php"    => $this->page->lang->header_index,
-                "bans.php"     => $this->page->lang->header_bans,
-                "mutes.php"    => $this->page->lang->header_mutes,
-                "warnings.php" => $this->page->lang->header_warnings,
-                "kicks.php"    => $this->page->lang->header_kicks,
+                "index.php"    => "<i class=\"fa fa-home\" style=\"padding-right:5px;\"></i>".$this->page->lang->header_index,
+                "bans.php"     => "<i class=\"fa fa-ban\" style=\"padding-right:5px;\"></i>".$this->page->lang->header_bans,
+                "mutes.php"    => "<i class=\"fa fa-commenting\" style=\"padding-right:5px;\"></i>".$this->page->lang->header_mutes,
+                "warnings.php" => "<i class=\"fa fa-gavel\" style=\"padding-right:5px;\"></i>".$this->page->lang->header_warnings,
+                "kicks.php"    => "<i class=\"fa fa-suitcase\" style=\"padding-right:5px;\"></i>".$this->page->lang->header_kicks,
             ));
             ?>
             <div class="nav navbar-nav navbar-right">
