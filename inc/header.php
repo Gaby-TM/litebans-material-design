@@ -167,6 +167,7 @@ $(document).ready(function () {
             ));
             ?>
             <div class="nav navbar-nav navbar-right">
+<?php $this->page->print_theme_changer(); ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->page->lang->credits ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">

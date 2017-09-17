@@ -47,10 +47,10 @@ tippy('#player-count-button', {
 })
 </script>
 
-<div class-"conatiner">
+<div class="conatiner">
 <?php $page->print_social(); ?>
     
-<?php $page->print_theme_changer(); ?>
+
     </div>
 </div>
 </div>

@@ -173,13 +173,13 @@ tr.hover {
 
 .form-control {
     display: block;
-    width: 100px;
+    width: 110px;
     height: 38px;
     padding: 8px 12px;
     font-size: 14px;
     line-height: 1.42857143;
     color: #2BBBAD;
-    background-color: #ffffff;
+    background-color: #2BBBAD!important;
     background-image: none;
     border: 1px solid #cccccc;
     border-radius: 4px;
