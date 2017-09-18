@@ -141,7 +141,7 @@ $(document).ready(function () {
 </script>
 
 </head>
-
+<?php if ($settings->show_navigation) : ?>
 <header class="navbar navbar-expand-lg navbar-dark bg-default">
     <div class="container">
         <div class="navbar-header">
@@ -180,6 +180,8 @@ $(document).ready(function () {
         </nav>
     </div>
 </header>
+<?php else : ?>
+<?php endif; ?>
 <?php
 }
 }

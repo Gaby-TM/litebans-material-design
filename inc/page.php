@@ -428,6 +428,19 @@ class Page {
          </div>
          ';
     }
+    
+        function print_main_page_search_button() {
+        $table = $this->name;
+        echo '
+         <div style="text-align: center;" class="row">
+             <div style="margin-left: 15px;">
+                 <form onsubmit="captureForm(event);" class="form-inline"><div class="form-group"><input type="text" class="form-control" style="margin-bottom: -15px;" id="user" placeholder="' . $this->lang->page_check_user . '"></div></form>
+             </div>
+             <script type="text/javascript">function captureForm(b){var o=$("#output");o.removeClass("in");var x=setTimeout(function(){o.html("<br>")}, 150);$.ajax({type:"GET",url:"check.php?name="+$("#user").val()+"&table=' . $table . '"}).done(function(c){clearTimeout(x);o.html(c);o.addClass("in")});b.preventDefault();return false};</script>
+             <div id="output" class="success fade" data-alert="alert" style="margin-left: 15px;"><br></div>
+         </div>
+         ';
+    }
 
     function print_pager($total = -1, $args = "", $prevargs = "") {
         if (!$this->settings->show_pager) return;

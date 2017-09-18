@@ -35,6 +35,13 @@ final class Settings {
 
         // Set your server IP for the Player's Online
         $this->server_ip = 'mc.hypixel.net';
+        
+        // Would you like to show your navigation bar? (This is a custom change that you can do if you want to iframe your site
+        // onto another site such as XenForo). (Keep in mind, this will also remove the user from being able to change themes, as it hides the theme changer).
+        $this->show_navigation = true;
+        
+        // This setting can go along with the option above if you want it to. If you choose to remove the navigation bar, you can also make a search button display on the main home page if you want to only allow users to view by searched user names.
+        $this->show_main_page_search_button = false;
 
         // Put the image URL of your logo here
         $this->logo_image = 'https://via.placeholder.com/275x150';
@@ -71,6 +78,7 @@ final class Settings {
         $this->meta_image ='https://www.spigotmc.org/data/avatars/l/64/64823.jpg?1496878424';
 
         // End of information added for GlareMaster's Litebans Addon
+
 
 
 

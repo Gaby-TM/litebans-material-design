@@ -11,8 +11,8 @@ $page->print_title();
           <img src="<?php echo $page->settings->logo_image; ?>"/>
             <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->lang->index_welcome1 . $page->settings->name . $page->lang->index_welcome2; ?></h2>
         </div>
-
 <div style="text-align: center;"><p style="color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->lang->index_allsins; ?></p></div>
+<?php $page->print_main_page_search_button(); ?>
 <div style="text-align: center;">
 <a href="<?php echo $page->settings->contact_link; ?>">
 <button type="button" class="btn btn-default"><?php echo $page->lang->contact_button; ?></button></a>
