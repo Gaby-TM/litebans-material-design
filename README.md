@@ -13,6 +13,6 @@ Web interface for [LiteBans](https://www.spigotmc.org/resources/litebans.3715/)
 - Demo Page - [link](https://glaremasters.me/litebans/)
 - Contact Me - [link](mailto:admin@glaremasters.me)
 
-## Bugs and Issues
+## Bug
 
 Please open an issue if you find a bug / want a new feature!
