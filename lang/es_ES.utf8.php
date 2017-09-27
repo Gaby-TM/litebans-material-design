@@ -95,14 +95,14 @@ class Lang {
         $this->history_playernotfound = "Jugador No Encontrado en la Base de Datos.";
 
         //Custom Added by GlareMasters's Material Design Addon
-        $this->contact_button = "Contact Us";
-        $this->ban_appeal = "Ban Appeal";
-        $this->players_online = "Players Online:";
-        $this->credits = "Credits";
+        $this->contact_button = "Contactanos";
+        $this->ban_appeal = "Apelar BAN";
+        $this->players_online = "Jugadores Online:";
+        $this->credits = "Creditos";
         $this->github = "GitHub";
         $this->litebans = "LiteBans";
         $this->glare = "GlareMasters";
-        $this->join = "Join";
-        $this->others = "others on";
+        $this->join = "Ingresar";
+        $this->others = "otros en";
     }
 }
