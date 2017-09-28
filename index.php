@@ -5,7 +5,6 @@ $page = new Page("index");
 $page->print_title();
 ?><br><br>
 <div class="container">
-<div id="particles-js"></div>
     <div class="jumbotron">
         <div style="text-align: center;">
           <img src="<?php echo $page->settings->logo_image; ?>"/>
@@ -57,4 +56,18 @@ tippy('#player-count-button', {
     </div>
 </div>
 </div>
+<script src="./inc/js/halloween-bats.js"></script>
+<script type="text/javascript">
+$.fn.halloweenBats({
+	image: 'https://raw.githubusercontent.com/Artimon/jquery-halloween-bats/master/bats.png', // Path to the image.
+	zIndex: 10000, // The z-index you need.
+	amount: 5, // Bat amount.
+	width: 35, // Image width.
+	height: 20, // Animation frame height.
+	frames: 4, // Amount of animation frames.
+	speed: 13, // Higher value = faster.
+	flickering: 15, // Higher value = slower.
+	target: 'body' // Target element
+});
+	</script>
 <?php $page->print_footer(false); ?>

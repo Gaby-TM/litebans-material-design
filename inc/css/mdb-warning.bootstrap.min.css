@@ -24,7 +24,9 @@
  * Atribution: Animate CSS, Twitter Bootstrap, Materialize CSS, Normalize CSS, Waves JS, WOW JS, Toastr, Chart.js , Hammer.js
  *
  */
-
+.halloweenBat {
+    display:none !important;
+}
  .dropdown-menu {
  	background-color: #ffbb33!important;
  }
