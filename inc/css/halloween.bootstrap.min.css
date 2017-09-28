@@ -37,7 +37,6 @@ body {
 body {
 background-image:url(https://i.imgur.com/R2nhAUp.jpg);
 background-size: cover;
-background-blend-mode: darken;
 }
 .icon{
     text-align:center; 
