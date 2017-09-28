@@ -16,3 +16,5 @@ Web interface for [LiteBans](https://www.spigotmc.org/resources/litebans.3715/)
 ## Bug
 
 Please open an issue if you find a bug / want a new feature!
+
+## Todo List
