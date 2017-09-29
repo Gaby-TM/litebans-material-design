@@ -18,3 +18,5 @@ Web interface for [LiteBans](https://www.spigotmc.org/resources/litebans.3715/)
 Please open an issue if you find a bug / want a new feature!
 
 ## Todo List
+- Holiday Themes
+- Optimization of Options
