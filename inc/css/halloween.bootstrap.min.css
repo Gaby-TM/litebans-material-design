@@ -6297,7 +6297,7 @@ body.scrollable {
 }
 .jumbotron {
 	background-color: #fafafa;
-	padding: 2rem
+	padding: 2rem;
 }
 .jumbotron.m-1, .jumbotron.m-2, .jumbotron.m-3 {
 	z-index: 50;
