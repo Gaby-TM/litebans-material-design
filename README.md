@@ -20,3 +20,7 @@ Please open an issue if you find a bug / want a new feature!
 ## Todo List
 - Holiday Themes
 - Optimization of Options
+
+## Usage
+- Copy all files to director
+- Configure db settings
