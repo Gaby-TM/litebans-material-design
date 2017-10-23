@@ -16,3 +16,14 @@ Web interface for [LiteBans](https://www.spigotmc.org/resources/litebans.3715/)
 ## Bugs and Issues
 
 Please open an issue if you find a bug / want a new feature!
+<<<<<<< HEAD
+=======
+
+## Todo List
+- Holiday Themes
+- Optimization of Options
+
+## Usage
+- Copy all files to director
+- Configure db settings
+>>>>>>> origin/master
