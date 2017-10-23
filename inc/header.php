@@ -84,7 +84,7 @@ $settings = $this->page->settings;
     
     
 <?php 
-$themeurl = "inc/css/mdb-teal.bootstrap.min.css";
+$themeurl = "inc/css/wilikath.bootstrap.min.css";
 if(isset($_POST['theme'])){
    $_SESSION['theme'] = strtolower($_POST['theme']);
 
@@ -94,7 +94,7 @@ if(isset($_SESSION['theme'])){
 }
     if(!empty($theme)) {
       $themeurl = "inc/css/" . $theme . ".bootstrap.min.css";
-} else { $themeurl = "inc/css/mdb-teal.bootstrap.min.css"; }?>
+} else { $themeurl = "inc/css/wilikath.bootstrap.min.css"; }?>
 
     <!-- CSS -->
     

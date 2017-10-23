@@ -59,7 +59,7 @@ tippy('#player-count-button', {
 <script src="./inc/js/halloween-bats.js"></script>
 <script type="text/javascript">
 $.fn.halloweenBats({
-	image: 'https://raw.githubusercontent.com/Artimon/jquery-halloween-bats/master/bats.png', // Path to the image.
+	image: 'https://i.imgur.com/rP6Ui82.png', // Path to the image.
 	zIndex: 10000, // The z-index you need.
 	amount: 5, // Bat amount.
 	width: 35, // Image width.
