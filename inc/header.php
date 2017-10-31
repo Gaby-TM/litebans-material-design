@@ -121,7 +121,7 @@ if(isset($_SESSION['theme'])){
 $(document).ready(function () {
     var interval = 5000;   //number of mili seconds between each call
     var refresh = function() {
-   $.getJSON("https://mcapi.ca/query/<?php echo $settings->server_ip ?>/players",function(json){
+   $.getJSON("https://use.gameapis.net/mc/query/players/<?php echo $settings->server_ip ?>",function(json){
           if (json.status !== true) {
          
         } else {
