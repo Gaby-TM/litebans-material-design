@@ -36,8 +36,9 @@ final class Settings {
         // Set your server IP for the Player's Online
         $this->server_ip = 'mc.hypixel.net';
         
-        // Litebans Web UI Version Checker 
-        $this->version = '2.5';
+        // Litebans Web UI Version Checker
+        $this->display_version = true;
+        $this->version = '2.6';
         
         // Would you like to show your navigation bar? (This is a custom change that you can do if you want to iframe your site
         // onto another site such as XenForo). (Keep in mind, this will also remove the user from being able to change themes, as it hides the theme changer).
