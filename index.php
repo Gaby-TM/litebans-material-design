@@ -77,18 +77,4 @@ tippy('#player-count-button', {
         <?php endif;?>
 </div>
 </div>
-<script src="./inc/js/halloween-bats.js"></script>
-<script type="text/javascript">
-$.fn.halloweenBats({
-	image: 'https://i.imgur.com/rP6Ui82.png', // Path to the image.
-	zIndex: 10000, // The z-index you need.
-	amount: 5, // Bat amount.
-	width: 35, // Image width.
-	height: 20, // Animation frame height.
-	frames: 4, // Amount of animation frames.
-	speed: 13, // Higher value = faster.
-	flickering: 15, // Higher value = slower.
-	target: 'body' // Target element
-});
-	</script>
 <?php $page->print_footer(false); ?>
