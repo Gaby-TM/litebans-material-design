@@ -6,23 +6,25 @@
     <meta name="description" content="">
     <title>litebans-php - Outdated Plugin</title>
     <link href="../inc/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../inc/css/wilikath.bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body><center>
 <div class="container">
     <div class="jumbotron">
-        <h2>Outdated Plugin</h2><br>
+         <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;">Outdated Plugin</h2><br>
         <div class="text-warning">
+            <p style="color:black; font-family: 'Raleway', sans-serif;">
             The web interface has connected to the database, but this database is managed by an older version of LiteBans.
             <br>
             You will need to update LiteBans before you can continue using the web interface. Older versions are not supported.
             <br>
             Updates can be downloaded here: https://www.spigotmc.org/resources/litebans.3715/
             <br>
-            LiteBans will automatically upgrade the tables in the database after you have updated. After this, the web interface will work as normal.
+                LiteBans will automatically upgrade the tables in the database after you have updated. After this, the web interface will work as normal.</p>
         </div>
         <br>
         <a href="../" class="btn btn-default">Try Again</a>
     </div>
-</div>
+    </div></center>
 </body>
 </html>

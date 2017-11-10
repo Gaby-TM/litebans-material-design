@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <title>litebans-php - Tables Not Found</title>
-    <link href="../inc/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css" rel="stylesheet">
 </head>
-<body>
+<body><center>
 <div class="container">
     <div class="jumbotron">
         <h2>Tables Not Found</h2><br>
@@ -43,6 +43,6 @@
         <br>
         <a href="../" class="btn btn-default">Try Again</a>
     </div>
-</div>
+</div></center>
 </body>
 </html>

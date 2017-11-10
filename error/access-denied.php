@@ -6,17 +6,19 @@
     <meta name="description" content="">
     <title>litebans-php - Database Error</title>
     <link href="../inc/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../inc/css/wilikath.bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body><center>
 <div class="container">
     <div class="jumbotron">
-        <h2>Database Error</h2><br>
+        <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;">Database Error</h2><br>
 
         <div class="text-warning">
+            <p style="color:black; font-family: 'Raleway', sans-serif;">
             The web interface was unable to connect to the database using the configuration provided.
             <br>
             Database error: Access denied
-            <br>
+                <br>
             <?php
             if (isset($_GET['error'])) {
                 $error = $_GET['error'];
@@ -31,11 +33,11 @@
                     }
                 }
             }
-            ?>
+            ?></p>
         </div>
         <br>
         <a href="../" class="btn btn-default">Try Again</a>
     </div>
-</div>
+</div></center>
 </body>
 </html>
