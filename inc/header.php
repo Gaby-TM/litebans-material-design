@@ -174,6 +174,12 @@ $(document).ready(function () {
                             <li><a target="_blank" href="https://github.com/darbyjack/litebans-material-design"><?php echo $this->page->lang->github ?></a></li>
                             <li><a target="_blank" href="https://www.spigotmc.org/resources/litebans.3715/"><?php echo $this->page->lang->litebans ?></a></li>
                             <li><a target="_blank" href="https://glaremasters.me/"><?php echo $this->page->lang->glare ?></a></li>
+                            <?php $version = file_get_contents("https://glaremasters.me/api/litebans-version.php"); ?>
+                            <?php if ($settings->version == $version) : ?>
+                            <li><a><?php echo $this->page->lang->version ?><b><?php echo $this->page->lang->version_latest ?></b></a></li>
+                            <?php else : ?>
+                            <li><a target="_blank" href="https://www.spigotmc.org/resources/litebans-material-design-theme-multiple-themes-included.46648/"><?php echo $this->page->lang->click_for_latest_version ?></a></li>
+                            <?php endif; ?>
                         </ul>
                     </li>
             </div>

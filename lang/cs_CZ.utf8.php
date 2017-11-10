@@ -95,5 +95,8 @@ class Lang {
         $this->glare = "GlareMasters";
         $this->join = "Join";
         $this->others = "others on";
+	$this->version = "Version: ";
+	$this->version_latest = "Latest";
+	$this->click_for_latest_version = "Click Here To Get Latest Version";
     }
 }

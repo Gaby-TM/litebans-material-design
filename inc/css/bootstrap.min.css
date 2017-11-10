@@ -3061,6 +3061,7 @@ tbody.collapse.in {
 	font-weight: normal;
 	line-height: 1.42857143;
 	color: #c8c8c8;
+	font-size: 13px !important;
 	white-space: nowrap
 }
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {

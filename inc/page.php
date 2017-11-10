@@ -356,11 +356,6 @@ class Page {
         }
     }
     
-    function print_social() {
-        if (!$this->settings->show_social) return;
-        require_once './inc/social.php';
-    }
-    
     function print_theme_changer() {
         if (!$this->settings->show_theme_changer) return;
         require_once './inc/theme-changer.php';
