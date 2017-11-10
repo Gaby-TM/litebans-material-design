@@ -6263,6 +6263,7 @@ body.scrollable {
 	background-color: #fafafa;
 	padding: 2rem;
     border: none!important;
+    opacity: 0.9;
 }
 .jumbotron.m-1, .jumbotron.m-2, .jumbotron.m-3 {
 	z-index: 50;
