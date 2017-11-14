@@ -31,7 +31,7 @@ final class Settings {
 
 
 
-        // Start of information added for GlareMaster's Litebans Addon
+       // Start of information added for GlareMaster's Litebans Addon
 
         // Set your server IP for the Player's Online
         $this->server_ip = 'mc.hypixel.net';
@@ -113,6 +113,9 @@ final class Settings {
 
         // If enabled, names will be shown below avatars instead of being shown next to them.
         $this->avatar_names_below = true;
+        
+        // If enabled, offline-mode UUIDs will be requested from avatar_source instead of player names.
+        $this->avatar_allow_offline_mode_uuids = false;
 
         // If enabled, the total amount of bans, mutes, warnings, and kicks will be shown next to the buttons in the header.
         $this->header_show_totals = true;
@@ -212,6 +215,7 @@ final class Settings {
             'kicks'    => "${table_prefix}kicks",
             'history'  => "${table_prefix}history",
             'servers'  => "${table_prefix}servers",
+            'config'   => "${table_prefix}config",
         );
 
         $this->driver = $driver;
@@ -236,7 +240,7 @@ final class Settings {
             try {
                 $this->conn = new PDO($dsn, $username, $password, $options);
 
-                $st = $this->conn->query("SELECT * FROM " . $this->table['servers'] . " LIMIT 1;");
+                $st = $this->conn->query("SELECT * FROM " . $this->table['config'] . " LIMIT 1;");
                 $st->fetch();
                 $st->closeCursor();
             } catch (PDOException $e) {
