@@ -8,22 +8,22 @@ $page->print_title();
     <div class="jumbotron">
         <div style="text-align: center;">
           <img src="<?php echo $page->settings->logo_image; ?>"/>
-            <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->lang->index_welcome1 . $page->settings->name . $page->lang->index_welcome2; ?></h2>
+            <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;"><h2><?php echo str_replace("{server}", $page->settings->name, $page->t("index_welcome")); ?></h2>
         </div>
-<div style="text-align: center;"><p style="color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->lang->index_allsins; ?></p></div>
+<div style="text-align: center;"><p style="color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->t("index_welcome2"); ?></p></div>
 <?php if ($page->settings->show_main_page_search_button) : ?>
 <?php $page->print_main_page_search_button(); ?>
 <?php else : ?>
 <?php endif; ?>
 <div style="text-align: center;">
 <a href="<?php echo $page->settings->contact_link; ?>">
-<button type="button" class="btn btn-default"><?php echo $page->lang->contact_button; ?></button></a>
+<button type="button" class="btn btn-default"><?php echo $page->t("contact_button"); ?></button></a>
 
 <a href="<?php echo $page->settings->appeal_link; ?>">
-<button type="button" class="btn btn-default"><?php echo $page->lang->ban_appeal; ?></button></a></div>
+<button type="button" class="btn btn-default"><?php echo $page->t("ban_appeal"); ?></button></a></div>
 <div style="text-align: center;">
 
-<button type="button" class="btn btn-default" id="player-count-button" data-clipboard-text="<?php echo $page->settings->server_ip ?>" title="Click to Copy IP"><?php echo $page->lang->join; ?> <span class="player-count badge"></span> <?php echo $page->lang->others; ?> <span class="badge" style="margin-left: 5px;"><?php echo $page->settings->server_ip ?></span></button>
+<button type="button" class="btn btn-default" id="player-count-button" data-clipboard-text="<?php echo $page->settings->server_ip ?>" title="Click to Copy IP"><?php echo $page->t("join"); ?> <span class="player-count badge"></span> <?php echo $page->t("others"); ?> <span class="badge" style="margin-left: 5px;"><?php echo $page->settings->server_ip ?></span></button>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>

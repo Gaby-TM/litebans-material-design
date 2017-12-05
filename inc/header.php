@@ -159,27 +159,27 @@ $(document).ready(function () {
         <nav id="litebans-navbar" class="collapse navbar-collapse">
             <?php
             $this->navbar(array(
-                "index.php"    => "<i class=\"fa fa-home\" style=\"padding-right:5px;\"></i>".$this->page->lang->header_index,
-                "bans.php"     => "<i class=\"fa fa-ban\" style=\"padding-right:5px;\"></i>".$this->page->lang->header_bans,
-                "mutes.php"    => "<i class=\"fa fa-commenting\" style=\"padding-right:5px;\"></i>".$this->page->lang->header_mutes,
-                "warnings.php" => "<i class=\"fa fa-gavel\" style=\"padding-right:5px;\"></i>".$this->page->lang->header_warnings,
-                "kicks.php"    => "<i class=\"fa fa-suitcase\" style=\"padding-right:5px;\"></i>".$this->page->lang->header_kicks,
+                "index.php"    => "<i class=\"fa fa-home\" style=\"padding-right:5px;\"></i>".$this->page->t("header_index"),
+                "bans.php"     => "<i class=\"fa fa-ban\" style=\"padding-right:5px;\"></i>".$this->page->t("header_bans"),
+                "mutes.php"    => "<i class=\"fa fa-commenting\" style=\"padding-right:5px;\"></i>".$this->page->t("header_mutes"),
+                "warnings.php" => "<i class=\"fa fa-gavel\" style=\"padding-right:5px;\"></i>".$this->page->t("header_warnings"),
+                "kicks.php"    => "<i class=\"fa fa-suitcase\" style=\"padding-right:5px;\"></i>".$this->page->t("header_kicks"),
             ));
             ?>
             <div class="nav navbar-nav navbar-right">
 <?php $this->page->print_theme_changer(); ?>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->page->lang->credits ?> <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->page->t("credits") ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a target="_blank" href="https://github.com/darbyjack/litebans-material-design"><?php echo $this->page->lang->github ?></a></li>
-                            <li><a target="_blank" href="https://www.spigotmc.org/resources/litebans.3715/"><?php echo $this->page->lang->litebans ?></a></li>
-                            <li><a target="_blank" href="https://glaremasters.me/"><?php echo $this->page->lang->glare ?></a></li>
+                            <li><a target="_blank" href="https://github.com/darbyjack/litebans-material-design"><?php echo $this->page->t("github") ?></a></li>
+                            <li><a target="_blank" href="https://www.spigotmc.org/resources/litebans.3715/"><?php echo $this->page->t("litebans") ?></a></li>
+                            <li><a target="_blank" href="https://glaremasters.me/"><?php echo $this->page->t("glare") ?></a></li>
                             <?php if ($settings->display_version) : ?>
                             <?php $version = file_get_contents("https://glaremasters.me/api/litebans-version.php"); ?>
                             <?php if ($settings->version == $version) : ?>
-                            <li><a><?php echo $this->page->lang->version ?><b><?php echo $this->page->lang->version_latest ?></b></a></li>
+                            <li><a><?php echo $this->page->t("version") ?><b><?php echo $this->page->t("version_latest") ?></b></a></li>
                             <?php else : ?>
-                            <li><a target="_blank" href="https://www.spigotmc.org/resources/litebans-material-design-theme-multiple-themes-included.46648/"><?php echo $this->page->lang->click_for_latest_version ?></a></li>
+                            <li><a target="_blank" href="https://www.spigotmc.org/resources/litebans-material-design-theme-multiple-themes-included.46648/"><?php echo $this->page->t("click_for_latest_version") ?></a></li>
                             <?php endif; ?>
                             <?php else : ?>
                             <?php endif; ?>
