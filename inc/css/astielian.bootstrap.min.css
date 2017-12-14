@@ -30,6 +30,9 @@
  .dropdown-menu {
  	background-color: #ffbb33!important;
  }
+canvas {
+    display: none!important;
+}
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

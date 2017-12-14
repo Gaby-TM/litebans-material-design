@@ -30,7 +30,9 @@
 .dropdown-menu {
 	background-color: #b20000!important;
 }
- 
+ canvas {
+    display: none!important;
+}
 body {
 background-image:url(https://i.imgur.com/jOF3taa.jpg);
 }

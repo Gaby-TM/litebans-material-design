@@ -48,6 +48,7 @@ tippy('#player-count-button', {
   arrow: true
 })
 </script>
+<script></script>
 <?php if ($page->settings->show_social) : ?>
 <div class="conatiner">
     <div class="icon">
@@ -78,3 +79,4 @@ tippy('#player-count-button', {
 </div>
 </div>
 <?php $page->print_footer(false); ?>
+  

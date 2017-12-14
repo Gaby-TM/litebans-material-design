@@ -31,14 +31,14 @@ final class Settings {
 
 
 
-       // Start of information added for GlareMaster's Litebans Addon
+        // Start of information added for GlareMaster's Litebans Addon
 
         // Set your server IP for the Player's Online
         $this->server_ip = 'mc.hypixel.net';
         
         // Litebans Web UI Version Checker
         $this->display_version = true;
-        $this->version = '2.6';
+        $this->version = '2.9';
         
         // Would you like to show your navigation bar? (This is a custom change that you can do if you want to iframe your site
         // onto another site such as XenForo). (Keep in mind, this will also remove the user from being able to change themes, as it hides the theme changer).
@@ -49,6 +49,9 @@ final class Settings {
 
         // Put the image URL of your logo here
         $this->logo_image = 'https://via.placeholder.com/275x150';
+
+	    // Put the image URL of your favico here
+	    $this->favico_image = 'inc/img/minecraft.ico';
 
         // Clicking on the "Contact Us" button will send you to this address.
         $this->contact_link = '#';

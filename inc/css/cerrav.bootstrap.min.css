@@ -30,7 +30,9 @@
   .dropdown-menu {
  	background-color: #33b5e5!important;
  }
-
+canvas {
+    display: none!important;
+}
 .badge {
     display: inline-block;
     min-width: 10px;

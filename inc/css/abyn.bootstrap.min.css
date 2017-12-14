@@ -30,7 +30,9 @@
 .dropdown-menu {
 	background-color: #aa66cc!important;
 }
-
+canvas {
+    display: none!important;
+}
 .icon{
     text-align:center; 
     margin-top:5em;

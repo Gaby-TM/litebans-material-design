@@ -29,6 +29,10 @@
     display:none !important;
 }
 
+canvas {
+    display: none!important;
+}
+
  .dropdown-menu {
  	background-color: #2BBBAD!important;
  }
