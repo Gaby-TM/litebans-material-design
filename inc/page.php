@@ -8,12 +8,13 @@ class Page {
         $settings = new Settings();
         setlocale(LC_ALL, $settings->lang);
         require_once './lang/en_US.utf8.php';
-         $this->defaultlang = new DefaultLang();
-if (class_exists("Lang")) {
-             $this->lang = new Lang();
-         } else {
-             $this->lang = $this->defaultlang;
-         }
+        $this->defaultlang = new DefaultLang();
+        require_once './lang/' . $settings->lang . '.php';
+        if (class_exists("Lang")) {
+            $this->lang = new Lang();
+        } else {
+            $this->lang = $this->defaultlang;
+        }
 
         $this->time = microtime(true);
         if ($header) {
