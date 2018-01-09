@@ -25,7 +25,6 @@ $page->print_title();
 
 <button type="button" class="btn btn-default" id="player-count-button" data-clipboard-text="<?php echo $page->settings->server_ip ?>" title="Click to Copy IP"><?php echo $page->t("join"); ?> <span class="player-count badge"></span> <?php echo $page->t("others"); ?> <span class="badge" style="margin-left: 5px;"><?php echo $page->settings->server_ip ?></span></button>
 </div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 <script src="https://unpkg.com/tippy.js@1.2.1/dist/tippy.min.js"></script>
 <script>
@@ -53,20 +52,20 @@ tippy('#player-count-button', {
 <div class="conatiner">
     <div class="icon">
 <a href="<?php echo $page->settings->youtube_link; ?>">
-    	 <span class="fa-stack fa-2x" aria-hidden="true">
-    	   <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
+    	 <span class="fa-stack fa-3x" aria-hidden="true">
+    	   <i class="fab fa-youtube fa-inverse"></i>
     	 </span></a>
 <a href="<?php echo $page->settings->twitter_link; ?>">
-    	  <span class="fa-stack fa-2x" aria-hidden="true">
-    	   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+    	  <span class="fa-stack fa-3x" aria-hidden="true">
+    	   <i class="fab fa-twitter-square fa-inverse"></i>
     	 </span></a>
 <a href="<?php echo $page->settings->facebook_link; ?>">
-    	  <span class="fa-stack fa-2x" aria-hidden="true">
-    	   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+    	  <span class="fa-stack fa-3x" aria-hidden="true">
+    	   <i class="fab fa-facebook fa-inverse"></i>
     	 </span></a>
-<a href="<?php echo $page->settings->googleplus_link; ?>">
-    	  <span class="fa-stack fa-2x" aria-hidden="true">
-    	   <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+<a href="<?php echo $page->settings->discord_link; ?>">
+    	  <span class="fa-stack fa-3x" aria-hidden="true">
+    	   <i class="fab fa-discord fa-inverse"></i>
     	 </span>
     </a>
 

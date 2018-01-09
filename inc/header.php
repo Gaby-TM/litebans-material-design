@@ -83,26 +83,35 @@ $settings = $this->page->settings;
 <meta name="og:type" content="website">
     
     
-<?php 
-$themeurl = "inc/css/wilikath.bootstrap.min.css";
-if(isset($_POST['theme'])){
-   $_SESSION['theme'] = strtolower($_POST['theme']);
+<?php
+$themeurl = "inc/css/" . $settings->default_theme . ".bootstrap.min.css";
 
-}
-if(isset($_SESSION['theme'])){
-   $theme = $_SESSION['theme'];
-}
-    if(!empty($theme)) {
-      $themeurl = "inc/css/" . $theme . ".bootstrap.min.css";
-} else { $themeurl = "inc/css/wilikath.bootstrap.min.css"; }?>
+if (isset($_POST['theme']))
+	{
+	$_SESSION['theme'] = strtolower($_POST['theme']);
+	}
+
+if (isset($_SESSION['theme']))
+	{
+	$theme = $_SESSION['theme'];
+	}
+
+if (!empty($theme))
+	{
+	$themeurl = "inc/css/" . $theme . ".bootstrap.min.css";
+	}
+  else
+	{
+	$themeurl = "inc/css/" . $settings->default_theme . ".bootstrap.min.css";
+	} ?>
 
     <!-- CSS -->
     
 <link href="<?php echo $this->autoversion('inc/css/bootstrap.min.css'); ?>" rel="stylesheet">
 <link rel="shortcut icon" href="<?php echo $settings->favico_image; ?>">
 <link href="<?php echo $this->autoversion($themeurl); ?>" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/tippy.js@1.2.1/dist/tippy.css">
 
@@ -255,11 +264,11 @@ $(document).ready(function () {
         <nav id="litebans-navbar" class="collapse navbar-collapse">
             <?php
             $this->navbar(array(
-                "index.php"    => "<i class=\"fa fa-home\" style=\"padding-right:5px;\"></i>".$this->page->t("header_index"),
-                "bans.php"     => "<i class=\"fa fa-ban\" style=\"padding-right:5px;\"></i>".$this->page->t("header_bans"),
-                "mutes.php"    => "<i class=\"fa fa-commenting\" style=\"padding-right:5px;\"></i>".$this->page->t("header_mutes"),
-                "warnings.php" => "<i class=\"fa fa-gavel\" style=\"padding-right:5px;\"></i>".$this->page->t("header_warnings"),
-                "kicks.php"    => "<i class=\"fa fa-suitcase\" style=\"padding-right:5px;\"></i>".$this->page->t("header_kicks"),
+                "index.php"    => "<i class=\"fas fa-home\" style=\"padding-right:5px;\"></i>".$this->page->t("header_index"),
+                "bans.php"     => "<i class=\"fas fa-ban\" style=\"padding-right:5px;\"></i>".$this->page->t("header_bans"),
+                "mutes.php"    => "<i class=\"fas fa-comment\" style=\"padding-right:5px;\"></i>".$this->page->t("header_mutes"),
+                "warnings.php" => "<i class=\"fas fa-gavel\" style=\"padding-right:5px;\"></i>".$this->page->t("header_warnings"),
+                "kicks.php"    => "<i class=\"fas fa-suitcase\" style=\"padding-right:5px;\"></i>".$this->page->t("header_kicks"),
             ));
             ?>
             <div class="nav navbar-nav navbar-right">

@@ -74,8 +74,11 @@ final class Settings {
         // Clicking on the Facebook Icon will send you to this address.
         $this->facebook_link = '#';
 
-        // Clicking on the Google Plus Icon will send you to this address.
-        $this->googleplus_link = '#';
+        // Clicking on the Discord Icon will send you to this address.
+        $this->discord_link = '#';
+        
+        // You can specify the default theme here (MUST BE ALL LOWERCASE)
+        $this->default_theme = 'wilikath';
 
         // Modify this for your SEO (Search Engine Optimization)
 

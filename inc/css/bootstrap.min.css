@@ -18,22 +18,22 @@
 
 input::-webkit-input-placeholder {
 color: white !important;
-padding-left: 10px;
 }
  
 input:-moz-placeholder { /* Firefox 18- */
 color: white !important;
-padding-left: 10px;
 }
  
 input::-moz-placeholder {  /* Firefox 19+ */
 color: white !important;
-padding-left: 10px;
 }
  
 input:-ms-input-placeholder {  
 color: white !important;
-padding-left: 10px;
+}
+
+input[type=text] {
+    text-indent: 10px;
 }
 
 
@@ -5847,7 +5847,8 @@ font-family: 'Raleway', sans-serif;
 	background-repeat: no-repeat;
 	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
 	-webkit-filter: none;
-	filter: none
+	filter: none;
+    margin-bottom: 15px!important;
 }
 .btn-default:hover {
 	background-repeat: no-repeat;
