@@ -11,13 +11,13 @@
 <body><center>
 <div class="container">
     <div class="jumbotron">
-        <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;">Database Error</h2><br>
+        <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;">Connection Error</h2><br>
 
         <div class="text-warning">
             <p style="color:black; font-family: 'Raleway', sans-serif;">
             The web interface was unable to connect to the database using the configuration provided.
             <br>
-            Database error: Access denied
+            Connection error: Access denied
                 <br>
             <?php
             if (isset($_GET['error'])) {
