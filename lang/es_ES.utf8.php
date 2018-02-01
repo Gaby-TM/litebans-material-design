@@ -97,17 +97,17 @@ class Lang {
         $array["history_playernotfound"] = "Jugador No Encontrado en la Base de Datos.";
 
         //Custom Added by GlareMasters's Material Design Addon
-        $array["contact_button"] = "Contact Us";
-        $array["ban_appeal"] = "Ban Appeal";
-        $array["players_online"] = "Players Online:";
-        $array["credits"] = "Credits";
+        $array["contact_button"] = "Contáctanos";
+        $array["ban_appeal"] = "Apelación";
+        $array["players_online"] = "Jugadores Online:";
+        $array["credits"] = "Creditos";
         $array["github"] = "GitHub";
         $array["litebans"] = "LiteBans";
         $array["glare"] = "GlareMasters";
-        $array["join"] = "Join";
-        $array["others"] = "others on";
-	    $array["version"] = "Version: ";
-	    $array["version_latest"] = "Latest";
-	    $array["click_for_latest_version"] = "Click Here To Get Latest Version";
+        $array["join"] = "Unirse a:";
+        $array["others"] = "jugadores en";
+        $array["version"] = "Version: ";
+        $array["version_latest"] = "Última";
+        $array["click_for_latest_version"] = "Haga clic aquí para obtener la última versión";
     }
 }

@@ -25,6 +25,9 @@ $page->print_title();
 
 <button type="button" class="btn btn-default" id="player-count-button" data-clipboard-text="<?php echo $page->settings->server_ip ?>" title="Click to Copy IP"><?php echo $page->t("join"); ?> <span class="player-count badge"></span> <?php echo $page->t("others"); ?> <span class="badge" style="margin-left: 5px;"><?php echo $page->settings->server_ip ?></span></button>
 </div>
+            <div style="text-align: center;">
+                <?php $page->print_player_heads(); ?>
+           </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
 <script src="https://unpkg.com/tippy.js@1.2.1/dist/tippy.min.js"></script>
 <script>
@@ -41,6 +44,12 @@ $page->print_title();
 
 <script>
 tippy('#player-count-button', {
+  animation: 'scale',
+  position: 'bottom',
+  duration: 500,
+  arrow: true
+})
+tippy('#player-head', {
   animation: 'scale',
   position: 'bottom',
   duration: 500,
@@ -68,7 +77,6 @@ tippy('#player-count-button', {
     	   <i class="fab fa-discord fa-inverse"></i>
     	 </span>
     </a>
-
 </div>
     
 

@@ -36,9 +36,14 @@ final class Settings {
         // Set your server IP for the Player's Online
         $this->server_ip = 'mc.hypixel.net';
         
+        // Set same IP / different if you use a different query port ONLY WORKS IF YOU HAVE QUERY-ENABLED TRUE IN SPIGOT.YML
+        $this->query_ip = '';
+        
+        $this->show_live_heads = false;
+        
         // Litebans Web UI Version Checker
         $this->display_version = true;
-        $this->version = '3.3';
+        $this->version = '3.4';
         
         // Would you like to show your navigation bar? (This is a custom change that you can do if you want to iframe your site
         // onto another site such as XenForo). (Keep in mind, this will also remove the user from being able to change themes, as it hides the theme changer).
@@ -267,7 +272,7 @@ final class Settings {
     
     static function append_query($existing, $new) {
         if ($existing !== "") {
-            return $existing . " AND $new";
+            return "$existing AND $new";
         }
         return "WHERE $new";
     }
