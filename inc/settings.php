@@ -43,7 +43,7 @@ final class Settings {
         
         // Litebans Web UI Version Checker
         $this->display_version = true;
-        $this->version = '3.4';
+        $this->version = '3.5';
         
         // Would you like to show your navigation bar? (This is a custom change that you can do if you want to iframe your site
         // onto another site such as XenForo). (Keep in mind, this will also remove the user from being able to change themes, as it hides the theme changer).
@@ -83,7 +83,7 @@ final class Settings {
         $this->discord_link = '#';
         
         // You can specify the default theme here (MUST BE ALL LOWERCASE)
-        $this->default_theme = 'wilikath';
+        $this->default_theme = 'vday';
 
         // Modify this for your SEO (Search Engine Optimization)
 
