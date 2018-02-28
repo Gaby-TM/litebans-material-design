@@ -203,7 +203,7 @@ final class Settings {
         }
 
 
-		$this->test_strftime();}
+		$this->test_strftime();
 
         date_default_timezone_set($timezone); // set configured timezone
 
