@@ -191,8 +191,8 @@ class Page {
                  $uuid = $name;
              }
         }
-        $uuid = str_replace($uuid, "-", "");
-        $src = str_replace('$NAME', $name, str_replace('$UUID', $uuid, $avatar_source));
+        $uuid = str_replace("-", "", $uuid);
+        $src = str_replace('{name}', $name, str_replace('{uuid}', $uuid, $avatar_source));
         if (in_array($name, $this->settings->console_aliases) || $name === $this->settings->console_name) {
             $src = $this->settings->console_image;
             $name = $this->settings->console_name;
@@ -406,6 +406,9 @@ class Page {
     }
 
     function print_table_rows($row, $array, $print_headers = true) {
+        if (!$this->settings->show_server_scope) {
+            unset($array[$this->t("column_server")]);
+        }
         if ($print_headers && !$this->table_headers_printed) {
             $headers = array_keys($array);
             $this->table_print_headers($headers);
