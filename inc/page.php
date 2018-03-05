@@ -394,15 +394,20 @@ class Page {
         require_once './inc/theme-changer.php';
     }
     
-    function print_player_heads() {
+   function print_player_heads() {
         if (!$this->settings->show_live_heads) return;
         $url = 'https://use.gameapis.net/mc/query/extensive/' . $this->settings->query_ip;
         $content = file_get_contents($url);
         $json = json_decode($content, true);
-        
+
+        if ($json['status'] === false) {
+            echo '<p>' . $this->t("query_not_enabled") . '</p>';
+        }
+        else {
         foreach($json['list'] as $players) {
         echo '<img src="https://cravatar.eu/avatar/' . $players . '.png" title="' . $players . '" id="player-head"</img>';
-        }
+        }    
+      }    
     }
 
     function print_table_rows($row, $array, $print_headers = true) {

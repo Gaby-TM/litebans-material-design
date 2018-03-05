@@ -119,5 +119,6 @@ class DefaultLang {
 	    $array["version"] = "Version: ";
 	    $array["version_latest"] = "Latest";
 	    $array["click_for_latest_version"] = "Click Here To Get Latest Version";
+        $array["query_not_enabled"] = "Querying is not enabled in your spigot.yml";
     }
 }

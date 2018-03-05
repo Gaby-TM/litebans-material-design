@@ -16,15 +16,22 @@ $page->print_title();
 <?php else : ?>
 <?php endif; ?>
 <div style="text-align: center;">
+<?php if ($page->settings->show_contact_button) : ?>
 <a href="<?php echo $page->settings->contact_link; ?>">
 <button type="button" class="btn btn-default"><?php echo $page->t("contact_button"); ?></button></a>
-
+<?php else : ?>
+<?php endif;?>
+<?php if ($page->settings->show_appeal_button) : ?>
 <a href="<?php echo $page->settings->appeal_link; ?>">
 <button type="button" class="btn btn-default"><?php echo $page->t("ban_appeal"); ?></button></a></div>
+<?php else : ?>
+<?php endif;?>
+<?php if ($page->settings->show_on_page) : ?>
 <div style="text-align: center;">
-
 <button type="button" class="btn btn-default" id="player-count-button" data-clipboard-text="<?php echo $page->settings->server_ip ?>" title="Click to Copy IP"><?php echo $page->t("join"); ?> <span class="player-count badge"></span> <?php echo $page->t("others"); ?> <span class="badge" style="margin-left: 5px;"><?php echo $page->settings->server_ip ?></span></button>
 </div>
+<?php else : ?>
+<?php endif;?>
             <div style="text-align: center;">
                 <?php $page->print_player_heads(); ?>
            </div>

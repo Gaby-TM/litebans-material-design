@@ -34,6 +34,8 @@ final class Settings {
         // Start of information added for GlareMaster's Litebans Addon
 
         // Set your server IP for the Player's Online
+        $this->show_on_page = true;
+        $this->show_in_nav = true;
         $this->server_ip = 'mc.hypixel.net';
         
         // Set same IP / different if you use a different query port ONLY WORKS IF YOU HAVE QUERY-ENABLED TRUE IN SPIGOT.YML
@@ -43,7 +45,7 @@ final class Settings {
         
         // Litebans Web UI Version Checker
         $this->display_version = true;
-        $this->version = '3.7';
+        $this->version = '3.8';
         
         // Would you like to show your navigation bar? (This is a custom change that you can do if you want to iframe your site
         // onto another site such as XenForo). (Keep in mind, this will also remove the user from being able to change themes, as it hides the theme changer).
@@ -59,9 +61,11 @@ final class Settings {
 	    $this->favico_image = 'inc/img/minecraft.ico';
 
         // Clicking on the "Contact Us" button will send you to this address.
+        $this->show_contact_button = true;
         $this->contact_link = '#';
 
         // Clicking on the "Ban Appeal" button will send you to this address.
+        $this->show_appeal_button = true;
         $this->appeal_link = '#';
         
         // Would you like to display the social media icons on the page?

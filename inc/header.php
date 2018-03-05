@@ -274,6 +274,10 @@ $(document).ready(function () {
             <div class="nav navbar-nav navbar-right">
 <?php $this->page->print_theme_changer(); ?>
                     <li class="dropdown">
+                       <?php if ($settings->show_in_nav) : ?>
+                      <li><a title="Click to Copy IP" data-clipboard-text="<?php echo $settings->server_ip ?>" style="color:white;" id="player-count-button"><?php echo $this->page->t("players_online") ?><span class="player-count badge"></span></a></li>
+                      <?php else : ?>
+                      <?php endif;?>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->page->t("credits") ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a target="_blank" href="https://github.com/darbyjack/litebans-material-design"><?php echo $this->page->t("github") ?></a></li>
