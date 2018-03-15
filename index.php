@@ -8,9 +8,9 @@ $page->print_title();
     <div class="jumbotron">
         <div style="text-align: center;">
           <img src="<?php echo $page->settings->logo_image; ?>"/>
-            <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;"><h2><?php echo str_replace("{server}", $page->settings->name, $page->t("index_welcome")); ?></h2>
+            <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;"><h2><?php echo str_replace("{server}", $page->settings->name, $page->t("index.welcome.main")); ?></h2>
         </div>
-<div style="text-align: center;"><p style="color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->t("index_welcome2"); ?></p></div>
+<div style="text-align: center;"><p style="color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->t("index.welcome.sub"); ?></p></div>
 <?php if ($page->settings->show_main_page_search_button) : ?>
 <?php $page->print_main_page_search_button(); ?>
 <?php else : ?>
