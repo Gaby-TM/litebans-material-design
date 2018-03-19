@@ -165,10 +165,7 @@ class Page {
         // An empty string is returned no matter what the value is.
         // Workaround: cast to unsigned.
         $selection = "id,uuid,reason,banned_by_name,banned_by_uuid,time,until,server_origin,server_scope,CAST(active AS UNSIGNED) AS active,CAST(ipban AS UNSIGNED) AS ipban";
-<<<<<<< HEAD
         if ($table === $this->settings->table['warnings']) {
-=======
->>>>>>> 9816a5fe02148640cefe9b27ca5088111d866558
             $selection .= ",CAST(warned AS UNSIGNED) AS warned";
         }
         if ($table !== $this->settings->table['kicks']) {
