@@ -28,12 +28,14 @@ final class Settings {
         // Clicking on the header name will send you to this address.
         $this->name_link = '#';
 
-
-
+        // Show server scope column?
+		$this->show_server_scope = true;
 
         // Start of information added for GlareMaster's Litebans Addon
 
         // Set your server IP for the Player's Online
+        $this->show_on_page = true;
+        $this->show_in_nav = true;
         $this->server_ip = 'mc.hypixel.net';
         
         // Set same IP / different if you use a different query port ONLY WORKS IF YOU HAVE QUERY-ENABLED TRUE IN SPIGOT.YML
@@ -43,7 +45,7 @@ final class Settings {
         
         // Litebans Web UI Version Checker
         $this->display_version = true;
-        $this->version = '3.6';
+        $this->version = '3.8';
         
         // Would you like to show your navigation bar? (This is a custom change that you can do if you want to iframe your site
         // onto another site such as XenForo). (Keep in mind, this will also remove the user from being able to change themes, as it hides the theme changer).
@@ -59,9 +61,11 @@ final class Settings {
 	    $this->favico_image = 'inc/img/minecraft.ico';
 
         // Clicking on the "Contact Us" button will send you to this address.
+        $this->show_contact_button = true;
         $this->contact_link = '#';
 
         // Clicking on the "Ban Appeal" button will send you to this address.
+        $this->show_appeal_button = true;
         $this->appeal_link = '#';
         
         // Would you like to display the social media icons on the page?
@@ -119,12 +123,17 @@ final class Settings {
 
         // Avatar images for all players will be fetched from this URL.
         // Examples:
-        /* 'https://cravatar.eu/avatar/$UUID/25'
-         * 'https://crafatar.com/avatars/$UUID?size=25'
-         * 'https://minotar.net/avatar/$NAME/25'
-         */
-        $this->avatar_source = 'https://crafatar.com/avatars/$UUID?size=25';
-        $this->avatar_source_offline_mode = 'https://minotar.net/avatar/$NAME/25';
+        // 'https://cravatar.eu/avatar/{uuid}/25'
+        // 'https://crafatar.com/avatars/{uuid}?size=25'
+        // 'https://minotar.net/avatar/{uuid}/25'
+        $this->avatar_source = 'https://crafatar.com/avatars/{uuid}?size=25';
+
+        // `avatar_source_offline_mode` controls where avatars for offline-mode players are fetched from.
+        // Offline-mode UUIDs are substituted for player names unless the `avatar_allow_offline_mode_uuids` option is enabled.
+        // (This is done because avatar sources generally serve the default "Steve" avatar for *all* offline-mode UUIDs, including those of premium players)
+        // Crafatar no longer supports names, so it cannot be used as an offline-mode player-name avatar source as of 2018-02-16 (https://crafatar.com/#meta-usernames)
+        // Since "skins.minecraft.net" is no longer available, this could pose a problem for other avatar sources as well.
+        $this->avatar_source_offline_mode = 'https://minotar.net/avatar/{name}/25';
 
         // If enabled, names will be shown below avatars instead of being shown next to them.
         $this->avatar_names_below = true;
@@ -151,22 +160,26 @@ final class Settings {
 
         $this->date_month_translations = null;
 
-        /*
-        $this->date_month_translations = array(
-            "January"   => "Month 1",
-            "February"  => "Month 2",
-            "March"     => "Month 3",
-            "April"     => "Month 4",
-            "May"       => "Month 5",
-            "June"      => "Month 6",
-            "July"      => "Month 7",
-            "August"    => "Month 8",
-            "September" => "Month 9",
-            "October"   => "Month 10",
-            "November"  => "Month 11",
-            "December"  => "Month 12",
-        );
-        */
+
+        // If your system locale doesn't automatically translate month names, you can set them manually here.
+        // Change "if (false)" to "if (true)" for this to take effect.
+        // X=>Y, X is replaced with Y. E.g. "January"=>"Januari"
+        if (false) {
+            $this->date_month_translations = array(
+                "January"   => "Month 1",
+                "February"  => "Month 2",
+                "March"     => "Month 3",
+                "April"     => "Month 4",
+                "May"       => "Month 5",
+                "June"      => "Month 6",
+                "July"      => "Month 7",
+                "August"    => "Month 8",
+                "September" => "Month 9",
+                "October"   => "Month 10",
+                "November"  => "Month 11",
+                "December"  => "Month 12",
+            );
+        }
 
         /*** End of configuration ***/
 
@@ -194,33 +207,7 @@ final class Settings {
         }
 
 
-        // test strftime
-
-        date_default_timezone_set("UTC"); // temporarily set UTC timezone for testing purposes
-
-        $fail = false;
-        $test = strftime($this->date_format, 0);
-        if ($test == false) {
-            ob_start();
-            var_dump($test);
-            $testdump = ob_get_clean();
-            echo("Error: date_format test failed. strftime(\"" . $this->date_format . "\",0) returned " . $testdump);
-            $fail = true;
-        }
-
-        $test = strftime("%Y-%m-%d %H:%M", 0);
-        if ($test !== "1970-01-01 00:00") {
-            ob_start();
-            var_dump($test);
-            $testdump = ob_get_clean();
-            echo("Assertion failed: strftime(\"%Y-%m-%d %H:%M\",0) != \"1970-01-01 00:00\"<br>");
-            echo("Actual result: " . $testdump);
-            $fail = true;
-        }
-
-        if ($fail === true) {
-            die;
-        }
+		$this->test_strftime();
 
         date_default_timezone_set($timezone); // set configured timezone
 
@@ -314,4 +301,35 @@ final class Settings {
         echo "<script data-cfasync=\"false\" type=\"text/javascript\">document.location=\"$url\";</script>";
         die;
     }
+
+        private function test_strftime() {
+        // If you modify this function, you may get an "Assertion failed" error.
+        date_default_timezone_set("UTC"); // temporarily set UTC timezone for testing purposes
+
+        $fail = false;
+        $test = strftime($this->date_format, 0);
+        if ($test == false) {
+            ob_start();
+            var_dump($test);
+            $testdump = ob_get_clean();
+            echo("Error: date_format test failed. strftime(\"" . $this->date_format . "\",0) returned " . $testdump);
+            $fail = true;
+        }
+
+        $test = strftime("%Y-%m-%d %H:%M", 0);
+        if ($test !== "1970-01-01 00:00") {
+            ob_start();
+            var_dump($test);
+            $testdump = ob_get_clean();
+            echo("Assertion failed: strftime(\"%Y-%m-%d %H:%M\",0) != \"1970-01-01 00:00\"<br>");
+            echo("Actual result: " . $testdump);
+            $fail = true;
+        }
+
+        if ($fail === true) {
+            die;
+        }
+    }
+
+
 }

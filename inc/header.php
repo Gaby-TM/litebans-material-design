@@ -126,102 +126,7 @@ if (!empty($theme))
             }, 100);
         }
     </script>
-    <script>
-    (function () {
 
-  var COUNT = 300;
-  var masthead = document.querySelector('html');
-  var canvas = document.createElement('canvas');
-  var ctx = canvas.getContext('2d');
-  var width = masthead.clientWidth;
-  var height = masthead.clientHeight;
-  var i = 0;
-  var active = false;
-
-  function onResize() {
-    width = masthead.clientWidth;
-    height = masthead.clientHeight;
-    canvas.width = width;
-    canvas.height = height;
-    ctx.fillStyle = '#FFF';
-
-    var wasActive = active;
-    active = width > 600;
-
-    if (!wasActive && active)
-      requestAnimFrame(update);
-  }
-
-  var Snowflake = function () {
-    this.x = 0;
-    this.y = 0;
-    this.vy = 0;
-    this.vx = 0;
-    this.r = 0;
-
-    this.reset();
-  }
-
-  Snowflake.prototype.reset = function() {
-    this.x = Math.random() * width;
-    this.y = Math.random() * -height;
-    this.vy = 1 + Math.random() * 3;
-    this.vx = 0.5 - Math.random();
-    this.r = 1 + Math.random() * 2;
-    this.o = 0.5 + Math.random() * 0.5;
-  }
-
-  canvas.style.position = 'absolute';
-  canvas.style.left = canvas.style.top = '0';
-
-  var snowflakes = [], snowflake;
-  for (i = 0; i < COUNT; i++) {
-    snowflake = new Snowflake();
-    snowflake.reset();
-    snowflakes.push(snowflake);
-  }
-
-  function update() {
-
-    ctx.clearRect(0, 0, width, height);
-
-    if (!active)
-      return;
-
-    for (i = 0; i < COUNT; i++) {
-      snowflake = snowflakes[i];
-      snowflake.y += snowflake.vy;
-      snowflake.x += snowflake.vx;
-
-      ctx.globalAlpha = snowflake.o;
-      ctx.beginPath();
-      ctx.arc(snowflake.x, snowflake.y, snowflake.r, 0, Math.PI * 2, false);
-      ctx.closePath();
-      ctx.fill();
-
-      if (snowflake.y > height) {
-        snowflake.reset();
-      }
-    }
-
-    requestAnimFrame(update);
-  }
-
-  // shim layer with setTimeout fallback
-  window.requestAnimFrame = (function(){
-    return  window.requestAnimationFrame       ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame    ||
-            function( callback ){
-              window.setTimeout(callback, 1000 / 60);
-            };
-  })();
-
-  onResize();
-  window.addEventListener('resize', onResize, false);
-
-  masthead.appendChild(canvas);
-})();</script>
 <script>
 $(document).ready(function () {
     var interval = 5000;   //number of mili seconds between each call
@@ -264,16 +169,20 @@ $(document).ready(function () {
         <nav id="litebans-navbar" class="collapse navbar-collapse">
             <?php
             $this->navbar(array(
-                "index.php"    => "<i class=\"fas fa-home\" style=\"padding-right:5px;\"></i>".$this->page->t("header_index"),
-                "bans.php"     => "<i class=\"fas fa-ban\" style=\"padding-right:5px;\"></i>".$this->page->t("header_bans"),
-                "mutes.php"    => "<i class=\"fas fa-comment\" style=\"padding-right:5px;\"></i>".$this->page->t("header_mutes"),
-                "warnings.php" => "<i class=\"fas fa-gavel\" style=\"padding-right:5px;\"></i>".$this->page->t("header_warnings"),
-                "kicks.php"    => "<i class=\"fas fa-suitcase\" style=\"padding-right:5px;\"></i>".$this->page->t("header_kicks"),
+                "index.php"    => "<i class=\"fas fa-home\" style=\"padding-right:5px;\"></i>".$this->page->t("title.index"),
+                "bans.php"     => "<i class=\"fas fa-ban\" style=\"padding-right:5px;\"></i>".$this->page->t("title.bans"),
+                "mutes.php"    => "<i class=\"fas fa-comment\" style=\"padding-right:5px;\"></i>".$this->page->t("title.mutes"),
+                "warnings.php" => "<i class=\"fas fa-gavel\" style=\"padding-right:5px;\"></i>".$this->page->t("title.warnings"),
+                "kicks.php"    => "<i class=\"fas fa-suitcase\" style=\"padding-right:5px;\"></i>".$this->page->t("title.kicks"),
             ));
             ?>
             <div class="nav navbar-nav navbar-right">
 <?php $this->page->print_theme_changer(); ?>
                     <li class="dropdown">
+                       <?php if ($settings->show_in_nav) : ?>
+                      <li><a title="Click to Copy IP" data-clipboard-text="<?php echo $settings->server_ip ?>" style="color:white;" id="player-count-button"><?php echo $this->page->t("players_online") ?><span class="player-count badge"></span></a></li>
+                      <?php else : ?>
+                      <?php endif;?>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->page->t("credits") ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a target="_blank" href="https://github.com/darbyjack/litebans-material-design"><?php echo $this->page->t("github") ?></a></li>
