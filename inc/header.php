@@ -183,6 +183,7 @@ $(document).ready(function () {
                       <li><a title="Click to Copy IP" data-clipboard-text="<?php echo $settings->server_ip ?>" style="color:white;" id="player-count-button"><?php echo $this->page->t("players_online") ?><span class="player-count badge"></span></a></li>
                       <?php else : ?>
                       <?php endif;?>
+                        <?php if ($settings->show_credits) : ?>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->page->t("credits") ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a target="_blank" href="https://github.com/darbyjack/litebans-material-design"><?php echo $this->page->t("github") ?></a></li>
@@ -198,6 +199,8 @@ $(document).ready(function () {
                             <?php else : ?>
                             <?php endif; ?>
                         </ul>
+                                      <?php else : ?>
+                      <?php endif;?>
                     </li>
             </div>
         </nav>
