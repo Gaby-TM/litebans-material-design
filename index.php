@@ -3,7 +3,7 @@ require_once './inc/page.php';
 
 $page = new Page("index");
 $page->print_title();
-?><br><br>
+?>
 <div class="container">
     <div class="jumbotron">
         <div style="text-align: center;">
@@ -65,7 +65,7 @@ tippy('#player-head', {
 </script>
 <script></script>
 <?php if ($page->settings->show_social) : ?>
-<div class="conatiner">
+<div class="conatiner ">
     <div class="icon">
 <a href="<?php echo $page->settings->youtube_link; ?>">
     	 <span class="fa-stack fa-3x" aria-hidden="true">
@@ -85,9 +85,7 @@ tippy('#player-head', {
     	 </span>
     </a>
 </div>
-    
-
-    </div>
+</div>
         <?php else : ?>
         <?php endif;?>
 </div>

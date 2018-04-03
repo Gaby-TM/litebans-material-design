@@ -162,16 +162,16 @@ if ($st->execute(array($id))) {
                 $idx = "generic.ipmute";
             }
             if ($idx !== null) {
-                $header .= "<span $style class='label label-danger'>" . $page->t($idx) . "</span>";
+                $header .= "<span $style class='badge badge-danger'>" . $page->t($idx) . "</span>";
             }
         }
         if ($active === true) {
-            $header .= "<span $style class='label label-danger'>" . $page->t("generic.active") . "</span>";
+            $header .= "<span $style class='badge badge-danger'>" . $page->t("generic.active") . "</span>";
             if ($permanent) {
-                $header .= "<span $style class='label label-danger'>" . $page->t("generic.permanent") . "</span>";
+                $header .= "<span $style class='badge badge-danger'>" . $page->t("generic.permanent") . "</span>";
             }
         } else {
-            $header .= "<span $style class='label label-warning'>" . $page->t("generic.inactive") . "</span>";
+            $header .= "<span $style class='badge badge-danger'>" . $page->t("generic.inactive") . "</span>";
         }
     }
     $page->print_header(true, $header);

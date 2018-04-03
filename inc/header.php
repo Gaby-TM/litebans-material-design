@@ -33,25 +33,24 @@ function __construct($page) {
 }
 
 function navbar($links) {
-    echo '<ul class="nav navbar-nav">';
+    echo '<ul class="navbar-nav mr-auto">';
     foreach ($links as $page => $title) {
         $li = "li";
+        $class = "nav-item";
         if ((substr($_SERVER['SCRIPT_NAME'], -strlen($page))) === $page) {
-            $li .= ' class="active"';
+            $class .= " active";
         }
+        $li .= " class=\"$class\"";
         if ($this->page->settings->header_show_totals && isset($this->count[$page])) {
             $title .= " <span class=\"badge\">";
             $title .= $this->count[$page];
             $title .= "</span>";
         }
-        echo "<$li><a href=\"$page\">$title</a></li>";
+        echo "<$li><a class=\"nav-link\" href=\"$page\">$title</a></li>";
     }
     echo '</ul>';
 }
 
-function autoversion($file) {
-    return $file . "?" . filemtime($file);
-}
 
 
 
@@ -84,7 +83,7 @@ $settings = $this->page->settings;
     
     
 <?php
-$themeurl = "inc/css/" . $settings->default_theme . ".bootstrap.min.css";
+$themeurl = "inc/css/" . $settings->default_theme . ".css";
 
 if (isset($_POST['theme']))
 	{
@@ -98,18 +97,19 @@ if (isset($_SESSION['theme']))
 
 if (!empty($theme))
 	{
-	$themeurl = "inc/css/" . $theme . ".bootstrap.min.css";
+	$themeurl = "inc/css/" . $theme . ".css";
 	}
   else
 	{
-	$themeurl = "inc/css/" . $settings->default_theme . ".bootstrap.min.css";
+	$themeurl = "inc/css/" . $settings->default_theme . ".css";
 	} ?>
 
     <!-- CSS -->
     
-<link href="<?php echo $this->autoversion('inc/css/bootstrap.min.css'); ?>" rel="stylesheet">
+<link href="<?php echo $this->page->autoversion('inc/css/bootstrap.min.css'); ?>" rel="stylesheet">
+<link href="<?php echo $this->page->autoversion('inc/css/mdb.min.css'); ?>" rel="stylesheet">
 <link rel="shortcut icon" href="<?php echo $settings->favico_image; ?>">
-<link href="<?php echo $this->autoversion($themeurl); ?>" rel="stylesheet">
+<link href="<?php echo $this->page->autoversion($themeurl); ?>" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.3/js/all.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -152,21 +152,18 @@ $(document).ready(function () {
 
 </head>
 <?php if ($settings->show_navigation) : ?>
-<header class="navbar navbar-expand-lg navbar-dark bg-default">
+<header role="banner">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#litebans-navbar" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+        <nav class="navbar navbar-expand-sm navbar-dark aqua-gradient">
             <a class="navbar-brand" href="<?php echo $settings->name_link; ?>">
                 <?php echo $settings->name; ?>
             </a>
-        </div>
-        <nav id="litebans-navbar" class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#litebans-navbar"
+                    aria-controls="litebans-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="litebans-navbar">
             <?php
             $this->navbar(array(
                 "index.php"    => "<i class=\"fas fa-home\" style=\"padding-right:5px;\"></i>".$this->page->t("title.index"),
@@ -176,36 +173,37 @@ $(document).ready(function () {
                 "kicks.php"    => "<i class=\"fas fa-suitcase\" style=\"padding-right:5px;\"></i>".$this->page->t("title.kicks"),
             ));
             ?>
-            <div class="nav navbar-nav navbar-right">
-<?php $this->page->print_theme_changer(); ?>
-                    <li class="dropdown">
-                       <?php if ($settings->show_in_nav) : ?>
-                      <li><a title="Click to Copy IP" data-clipboard-text="<?php echo $settings->server_ip ?>" style="color:white;" id="player-count-button"><?php echo $this->page->t("players_online") ?><span class="player-count badge"></span></a></li>
-                      <?php else : ?>
-                      <?php endif;?>
-                        <?php if ($settings->show_credits) : ?>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $this->page->t("credits") ?> <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a target="_blank" href="https://github.com/darbyjack/litebans-material-design"><?php echo $this->page->t("github") ?></a></li>
-                            <li><a target="_blank" href="https://www.spigotmc.org/resources/litebans.3715/"><?php echo $this->page->t("litebans") ?></a></li>
-                            <li><a target="_blank" href="https://glaremasters.me/"><?php echo $this->page->t("glare") ?></a></li>
-                            <?php if ($settings->display_version) : ?>
-                            <?php $version = file_get_contents("https://glaremasters.me/api/litebans-version.php"); ?>
-                            <?php if ($settings->version == $version) : ?>
-                            <li><a><?php echo $this->page->t("version") ?><b><?php echo $this->page->t("version_latest") ?></b></a></li>
-                            <?php else : ?>
-                            <li><a target="_blank" href="https://www.spigotmc.org/resources/litebans-material-design-theme-multiple-themes-included.46648/"><?php echo $this->page->t("click_for_latest_version") ?></a></li>
-                            <?php endif; ?>
-                            <?php else : ?>
-                            <?php endif; ?>
-                        </ul>
-                                      <?php else : ?>
-                      <?php endif;?>
-                    </li>
+  <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+        <?php $this->page->print_theme_changer(); ?>
+    </li>
+    <div class="dropdown">
+  <button class="btn navdrop dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <?php echo $this->page->t("credits") ?>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="https://github.com/darbyjack/litebans-material-design"><?php echo $this->page->t("github") ?></a>
+    <a class="dropdown-item" href="https://www.spigotmc.org/resources/litebans.3715/"><?php echo $this->page->t("litebans") ?></a>
+    <a class="dropdown-item" href="https://glaremasters.me/"><?php echo $this->page->t("glare") ?></a>
+      
+      <?php if ($settings->display_version) : ?>
+      <?php $version = file_get_contents("https://glaremasters.me/api/litebans-version.php"); ?>
+    <?php if ($settings->version == $version) : ?>
+      <a class="dropdown-item"><?php echo $this->page->t("version") ?><b><?php echo $this->page->t("version_latest") ?></b></a>
+      <?php else : ?>
+      <a class="dropdown-item" href="https://www.spigotmc.org/resources/litebans-material-design-theme-multiple-themes-included.46648/"><?php echo $this->page->t("click_for_latest_version") ?></a>
+      <?php endif; ?>
+      <?php else : ?>
+      <?php endif; ?>
+      
+  </div>
+      </div>
+  </ul>
             </div>
         </nav>
     </div>
 </header>
+<br><br>
 <?php else : ?>
 <?php endif; ?>
 <?php

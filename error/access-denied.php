@@ -6,15 +6,26 @@
     <meta name="description" content="">
     <title>litebans-php - Database Error</title>
     <link href="../inc/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../inc/css/wilikath.bootstrap.min.css" rel="stylesheet">
+    <link href="../inc/css/mdb.min.css" rel="stylesheet">
 </head>
+<style>
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html {
+    background-image: url(../inc/img/backgrounds/unconfigured-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
 <body><center>
 <div class="container">
     <div class="jumbotron">
-        <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;">Connection Error</h2><br>
-
-        <div class="text-warning">
-            <p style="color:black; font-family: 'Raleway', sans-serif;">
+        <h1 class="h1-responsive">Connection Error</h1><br>
+        <h4>
             The web interface was unable to connect to the database using the configuration provided.
             <br>
             Connection error: Access denied
@@ -33,10 +44,9 @@
                     }
                 }
             }
-            ?></p>
-        </div>
+            ?></h4>
         <br>
-        <a href="../" class="btn btn-default">Try Again</a>
+        <a href="../" class="btn btn-cyan">Try Again</a>
     </div>
 </div></center>
 </body>

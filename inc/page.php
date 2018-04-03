@@ -463,6 +463,8 @@ class Page {
         }
     }
 
+
+
     function print_check_form() {
         $table = $this->name;
         echo '
@@ -537,6 +539,10 @@ class Page {
         echo "<!-- Page generated in $time seconds. -->";
 
         include_once './inc/footer.php';
+    }
+
+        function autoversion($file) {
+        return $file . "?" . filemtime($file);
     }
 
     function table_begin() {

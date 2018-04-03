@@ -6,24 +6,36 @@
     <meta name="description" content="">
     <title>litebans-php - Outdated Plugin</title>
     <link href="../inc/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../inc/css/wilikath.bootstrap.min.css" rel="stylesheet">
+    <link href="../inc/css/mdb.min.css" rel="stylesheet">
 </head>
+<style>
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html {
+    background-image: url(../inc/img/backgrounds/unconfigured-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
 <body><center>
 <div class="container">
     <div class="jumbotron">
-         <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;">Outdated Plugin</h2><br>
-        <div class="text-warning">
-            <p style="color:black; font-family: 'Raleway', sans-serif;">
-            The web interface has connected to the database, but this database is managed by an older version of LiteBans.
-            <br>
-            You will need to update LiteBans before you can continue using the web interface. Older versions are not supported.
-            <br>
-            Updates can be downloaded here: https://www.spigotmc.org/resources/litebans.3715/
-            <br>
-                LiteBans will automatically upgrade the tables in the database after you have updated. After this, the web interface will work as normal.</p>
-        </div>
+         <h1 class="h1-responsive">Outdated Plugin</h1><br>
+        <h4>
+            The web interface has connected to the database, but this database is managed by an <a class="text-warning" style="color: #00bcd4;">older version</a> of LiteBans.
+            <br><br>
+            You will need to update LiteBans before you can continue using the web interface. Older versions are <a class="text-warning" style="color: #00bcd4;">not supported.</a>
+            <br><br>
+            Updates can be downloaded here: <a href="https://www.spigotmc.org/resources/litebans.3715/" class="text-warning" style="color: #00bcd4;">https://www.spigotmc.org/resources/litebans.3715/</a>
+            <br><br>
+                LiteBans will automatically upgrade the tables in the database after you have updated. After this, the web interface will work as normal.
+        </h4>
         <br>
-        <a href="../" class="btn btn-default">Try Again</a>
+        <a href="../" class="btn btn-cyan">Try Again</a>
     </div>
     </div></center>
 </body>

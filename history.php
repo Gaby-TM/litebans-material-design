@@ -162,7 +162,7 @@ try {
 
             $label_type = $page->type;
             $label_name = Info::create($row, $page, $label_type)->name(); //ucfirst($label_type);
-            $label = "<span $style class='label label-$label_type'>$label_name</span>";
+            $label = "<span $style class='badge badge-$label_type'>$label_name</span>";
 
             $page->print_table_rows($row, array(
                 $page->t("generic.type")      => $label,
