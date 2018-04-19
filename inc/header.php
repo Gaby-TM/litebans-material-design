@@ -177,6 +177,7 @@ $(document).ready(function () {
           <li class="nav-item">
         <?php $this->page->print_theme_changer(); ?>
     </li>
+    <?php if ($settings->show_credits) : ?>
     <div class="dropdown">
   <button class="btn navdrop dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <?php echo $this->page->t("credits") ?>
@@ -198,6 +199,8 @@ $(document).ready(function () {
       
   </div>
       </div>
+      <?php else : ?>
+      <?php endif; ?>
   </ul>
             </div>
         </nav>
