@@ -14,17 +14,17 @@ function __construct($page) {
         $t_kicks = $t['kicks'];
         try {
             $st = $page->conn->query("SELECT
-            (SELECT COUNT(*) FROM $t_bans) AS c_bans,
-            (SELECT COUNT(*) FROM $t_mutes) AS c_mutes,
-            (SELECT COUNT(*) FROM $t_warnings) AS c_warnings,
-            (SELECT COUNT(*) FROM $t_kicks) AS c_kicks");
-            ($row = $st->fetch(PDO::FETCH_ASSOC)) or die('Failed to fetch row counts.');
+            (SELECT COUNT(*) FROM $t_bans),
+            (SELECT COUNT(*) FROM $t_mutes),
+            (SELECT COUNT(*) FROM $t_warnings),
+            (SELECT COUNT(*) FROM $t_kicks)");
+            ($row = $st->fetch(PDO::FETCH_NUM)) or die('Failed to fetch row counts.');
             $st->closeCursor();
             $this->count = array(
-                'bans.php'     => $row['c_bans'],
-                'mutes.php'    => $row['c_mutes'],
-                'warnings.php' => $row['c_warnings'],
-                'kicks.php'    => $row['c_kicks'],
+                'bans.php'     => $row[0],
+                'mutes.php'    => $row[1],
+                'warnings.php' => $row[2],
+                'kicks.php'    => $row[3],
             );
         } catch (PDOException $ex) {
             Settings::handle_error($page->settings, $ex);
@@ -177,7 +177,7 @@ $(document).ready(function () {
           <li class="nav-item">
         <?php $this->page->print_theme_changer(); ?>
     </li>
-    <?php if ($settings->show_credits) : ?>
+      <?php if ($settings->show_credits) : ?>
     <div class="dropdown">
   <button class="btn navdrop dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <?php echo $this->page->t("credits") ?>

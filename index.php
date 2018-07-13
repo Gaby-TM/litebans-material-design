@@ -7,7 +7,7 @@ $page->print_title();
 <div class="container">
     <div class="jumbotron">
         <div style="text-align: center;">
-          <img class="img-fluid" src="<?php echo $page->settings->logo_image; ?>"/>
+          <img src="<?php echo $page->settings->logo_image; ?>"/>
             <h2 style="text-shadow:none; color:black; font-family: 'Raleway', sans-serif;"><h2><?php echo str_replace("{server}", $page->settings->name, $page->t("index.welcome.main")); ?></h2>
         </div>
 <div style="text-align: center;"><p style="color:black; font-family: 'Raleway', sans-serif;"><?php echo $page->t("index.welcome.sub"); ?></p></div>
